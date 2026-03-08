@@ -30,7 +30,6 @@ body{
   overflow-x:hidden;
 }
 
-
 /* PURPLE AMBIENT */
 body::after{
   content:'';
@@ -87,7 +86,6 @@ nav{
   display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:center;
 }
 
-/* Hero text */
 .hero-eyebrow{
   font-family:'Share Tech Mono',monospace;
   font-size:0.65rem;letter-spacing:0.35em;text-transform:uppercase;
@@ -280,7 +278,7 @@ h2 .ac{
   display:inline-block;margin-top:16px;
   font-family:'Share Tech Mono',monospace;font-size:0.58rem;
   letter-spacing:0.15em;text-transform:uppercase;
-  border:1px solid rgba(123,63,160,0.4);color:var(--pu2);
+  border:1px solid rgba(123,63,160,0.4);
   padding:5px 14px;border-radius:2px;
   color:#B07FD0;
 }
@@ -346,6 +344,14 @@ h2 .ac{
 }
 .glbl{font-size:0.85rem;color:var(--dim);line-height:1.5;}
 .glbl strong{display:block;color:var(--cream);font-size:0.95rem;margin-bottom:3px;font-weight:500;}
+
+/* POSTS */
+.posts-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;}
+.post-wrap{display:flex;flex-direction:column;gap:12px;}
+.post-label{
+  font-family:'Share Tech Mono',monospace;font-size:0.6rem;
+  letter-spacing:0.25em;text-transform:uppercase;color:var(--or);
+}
 
 /* SOCIAL */
 .social-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
@@ -528,17 +534,6 @@ footer{
 }
 @keyframes gradShift{from{background-position:0%}to{background-position:200%}}
 
-/* SERVE ITEM STAGGER */
-.serve-item{transition:border-color 0.25s,transform 0.25s,opacity 0.6s,translate 0.6s;}
-
-/* POSTS */
-.posts-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;}
-.post-wrap{display:flex;flex-direction:column;gap:12px;}
-.post-label{
-  font-family:'Share Tech Mono',monospace;font-size:0.6rem;
-  letter-spacing:0.25em;text-transform:uppercase;color:var(--or);
-}
-
 /* RESPONSIVE */
 @media(max-width:960px){
   nav{padding:14px 24px;}
@@ -580,7 +575,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     <a href="#events">Events</a>
     <a href="#initiatives">Initiatives</a>
     <a href="#posts">Posts</a>
-    <a href="https://www.instagram.com/coolnamepending" target="_blank" rel="noopener" class="nav-cta">Instagram</a>
+    <a href="https://www.instagram.com/coolnamepending.ftc" target="_blank" rel="noopener" class="nav-cta">Instagram</a>
   </div>
 </nav>
 
@@ -591,12 +586,12 @@ window.addEventListener('DOMContentLoaded',()=>{
     <div class="hero-content">
       <div class="hero-eyebrow">FTC Team #30439 — Launched March 7, 2026</div>
       <h1>
-        <span class="w1">Build</span>
-        <span class="w2">Inclusion.</span>
+        <span class="w1">Forge Your</span>
+        <span class="w2">Path.</span>
       </h1>
       <p class="hero-sub">
         Forge Ally brings students who don't see themselves in STEM into robotics and the FIRST community —
-        <strong>girls, neurodivergent thinkers, and anyone told this space isn't for them.</strong>
+        <strong>girls, neurodivergent thinkers, and anyone who doesn't see themselves in STEM.</strong>
       </p>
       <div class="hero-actions">
         <a href="#initiatives" class="btn-fill">See the Initiative</a>
@@ -604,7 +599,6 @@ window.addEventListener('DOMContentLoaded',()=>{
       </div>
     </div>
     <div class="hero-panel">
-      <div class="hero-panel::before"></div>
       <div class="panel-logo-wrap">
         <img class="panel-logo dynamic-logo" src="" alt="Forge Ally">
       </div>
@@ -614,8 +608,8 @@ window.addEventListener('DOMContentLoaded',()=>{
           <div class="pstat-lbl">Interviews<br>Planned</div>
         </div>
         <div class="pstat">
-          <div class="pstat-val">48+</div>
-          <div class="pstat-lbl">Posts<br>in 3 Months</div>
+          <div class="pstat-val">10</div>
+          <div class="pstat-lbl">Posts<br>in 5 days</div>
         </div>
         <div class="pstat">
           <div class="pstat-val">0→5</div>
@@ -669,7 +663,7 @@ window.addEventListener('DOMContentLoaded',()=>{
 <!-- MISSION -->
 <section class="section" id="mission">
   <div class="stag reveal">Mission</div>
-  <h2 class="reveal d1">Innovation happens when <span class="ac">everyone</span><br>has a place at the table.</h2>
+  <h2 class="reveal d1">Innovation happens when <span class="ac">everyone</span><br>is included.</h2>
   <div class="mission-grid">
     <div class="reveal-left">
       <div class="big-quote">"Robotics isn't just about building machines — it's about building <span class="glow">opportunity.</span>"</div>
@@ -684,7 +678,7 @@ window.addEventListener('DOMContentLoaded',()=>{
         <div class="serve-item reveal d1"><div class="serve-dot"></div><div class="serve-text">Girls in STEM who lack role models in robotics</div></div>
         <div class="serve-item reveal d2"><div class="serve-dot"></div><div class="serve-text">Neurodivergent students whose strengths go unrecognized</div></div>
         <div class="serve-item reveal d3"><div class="serve-dot"></div><div class="serve-text">Students without access or confidence in technical spaces</div></div>
-        <div class="serve-item reveal d4"><div class="serve-dot"></div><div class="serve-text">Anyone told this community isn't built for them</div></div>
+        <div class="serve-item reveal d4"><div class="serve-dot"></div><div class="serve-text">Anyone who doesn't see themselves in STEM</div></div>
       </div>
     </div>
   </div>
@@ -709,7 +703,7 @@ window.addEventListener('DOMContentLoaded',()=>{
         <div class="ev-title">Women's History Month Pop-Up</div>
         <div class="ev-loc">MarketFair Mall, Princeton, NJ</div>
         <div class="ev-desc">
-          Our first public outreach event — bringing Forge Ally directly to the community. Students got hands-on with robotics for the first time, met the team, and heard from women in STEM.
+          Our first public outreach event — bringing Forge Ally directly to the community. Students got hands-on with robotics for the first time, met the team, and learned about FIRST and FTC.
         </div>
         <div class="ev-pill">Women's History Month 2026</div>
       </div>
@@ -727,7 +721,7 @@ window.addEventListener('DOMContentLoaded',()=>{
   <div class="init-grid">
     <div class="init-card reveal d1" data-n="01">
       <div class="init-name">STEM Interview Series</div>
-      <div class="init-desc">4 interviews per week with engineers, developers, AI researchers, accessibility specialists, and business leaders. Their stories become the proof that STEM belongs to everyone.</div>
+      <div class="init-desc">5+ interviews per week with engineers, developers, AI researchers, accessibility specialists, and business leaders. Their stories become the proof that STEM belongs to everyone.</div>
       <div class="init-tags">
         <span class="init-tag">4/week</span>
         <span class="init-tag">Short-form clips</span>
@@ -735,30 +729,28 @@ window.addEventListener('DOMContentLoaded',()=>{
       </div>
     </div>
     <div class="init-card reveal d2" data-n="02">
-      <div class="init-name">Neurodiversity Education</div>
-      <div class="init-desc">Quick-hit graphics, facts, and posts that teach what neurodiversity actually means — and why it makes STEM stronger. Pattern recognition. Creative problem-solving. Real strengths.</div>
+      <div class="init-name">Resources for all</div>
+      <div class="init-desc">Daily resources for everyone to use ranging from beginner to expert.</div>
       <div class="init-tags">
-        <span class="init-tag">Graphics</span>
-        <span class="init-tag">Quick facts</span>
-        <span class="init-tag">Team tips</span>
+        <span class="init-tag">Learning</span>
+        <span class="init-tag">Resources</span>
+        <span class="init-tag">Independent Learning</span>
       </div>
     </div>
     <div class="init-card reveal d3" data-n="03">
-      <div class="init-name">Student Spotlights</div>
-      <div class="init-desc">Real moments. Girls learning robotics for the first time. Neurodivergent students building. Mentorship in action. The proof that anyone can belong in this community.</div>
+      <div class="init-name">Events</div>
+      <div class="init-desc">We reach the STEM community through hosting and supporting events, spreading the message of FIRST and Forge Ally </div>
       <div class="init-tags">
-        <span class="init-tag">First-timers</span>
-        <span class="init-tag">Team moments</span>
-        <span class="init-tag">Real stories</span>
+        <span class="init-tag">Outreach</span>
+        <span class="init-tag">STEM</span>
       </div>
     </div>
     <div class="init-card reveal d4" data-n="04">
-      <div class="init-name">AI Founder Collaboration</div>
-      <div class="init-desc">Partnering with a young AI founder who built an educational accessibility app. Joint content exploring how technology can support diverse learners and open doors in STEM.</div>
+      <div class="init-name">Free Workshops</div>
+      <div class="init-desc">Nothing teaches the community better than hands-on experience. Through free workshops for students, people who may not see themselves in STEM get a glimpse into STEM.</div>
       <div class="init-tags">
-        <span class="init-tag">Cross-promotion</span>
-        <span class="init-tag">AI + accessibility</span>
-        <span class="init-tag">Joint content</span>
+        <span class="init-tag">STEM</span>
+        <span class="init-tag">Hands-On</span>
       </div>
     </div>
   </div>
@@ -772,19 +764,19 @@ window.addEventListener('DOMContentLoaded',()=>{
     <div class="goals-grid">
       <div class="gcell reveal d1">
         <div class="gnum">40+</div>
-        <div class="glbl"><strong>Professionals Interviewed</strong>Across engineering, design, AI, education, and accessibility</div>
+        <div class="glbl"><strong>Planned: Professionals Interviewed</strong>Across engineering, design, AI, education, and accessibility</div>
       </div>
       <div class="gcell reveal d2">
-        <div class="gnum">48+</div>
-        <div class="glbl"><strong>Social Posts Published</strong>Across Instagram, TikTok, YouTube Shorts, and LinkedIn</div>
+        <div class="gnum">40+</div>
+        <div class="glbl"><strong>Social Posts Published</strong>Per month</div>
       </div>
       <div class="gcell reveal d3">
-        <div class="gnum">4</div>
-        <div class="glbl"><strong>Posts Per Week</strong>Interview clips, inclusion tips, student stories, and career advice</div>
+        <div class="gnum">10</div>
+        <div class="glbl"><strong>Posts Per Week</strong>Interview clips, funny skits, progress posts, and more.</div>
       </div>
       <div class="gcell reveal d4">
-        <div class="gnum">4</div>
-        <div class="glbl"><strong>Platforms</strong>Instagram, TikTok, YouTube Shorts, and LinkedIn — where students actually are</div>
+        <div class="gnum">2</div>
+        <div class="glbl"><strong>Platforms</strong>Instagram and LinkedIn — where students and professionals actually are</div>
       </div>
     </div>
   </div>
@@ -792,39 +784,7 @@ window.addEventListener('DOMContentLoaded',()=>{
 
 <div class="grad-bar"></div>
 
-<!-- SOCIAL -->
-<section class="section" id="social">
-  <div class="stag">Follow Along</div>
-  <h2>We post. <span class="ac">Every week.</span></h2>
-  <div class="social-grid">
-    <div>
-      <p class="section-sub" style="margin-bottom:0;">Every Monday, Wednesday, Friday, and Sunday — a new post goes out. Interview clips. Inclusion facts. Student moments. Career advice. Follow us wherever you are.</p>
-      <div class="platform-list">
-        <a class="platform" href="https://www.instagram.com/coolnamepending" target="_blank" rel="noopener">
-          <div class="platform-icon p-ig">IG</div>
-          <div><span class="platform-name">Instagram</span><span class="platform-handle">@coolnamepending</span></div>
-        </a>
-        <a class="platform" href="https://coolnamepending.vercel.app" target="_blank" rel="noopener">
-          <div class="platform-icon p-web">CNP</div>
-          <div><span class="platform-name">Team Website</span><span class="platform-handle">coolnamepending.vercel.app</span></div>
-        </a>
-      </div>
-    </div>
-    <div>
-      <div class="stag" style="margin-bottom:16px;">Weekly Schedule</div>
-      <div class="sched">
-        <div class="sched-row"><div class="sched-day">Monday</div><div class="sched-content">STEM Professional Interview clip</div></div>
-        <div class="sched-row"><div class="sched-day">Wednesday</div><div class="sched-content">Inclusion tip or neurodiversity fact</div></div>
-        <div class="sched-row"><div class="sched-day">Friday</div><div class="sched-content">Student robotics moment or team story</div></div>
-        <div class="sched-row"><div class="sched-day">Sunday</div><div class="sched-content">Career advice clip from interview series</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="grad-bar"></div>
-
-<!-- POSTS -->
+<!-- POSTS — From the Feed -->
 <section class="section" id="posts">
   <div class="stag reveal">Latest Posts</div>
   <h2 class="reveal d1">From the Feed: <span class="ac">Interviews.</span> and more.</h2>
@@ -848,6 +808,39 @@ window.addEventListener('DOMContentLoaded',()=>{
 </section>
 <script async src="https://www.instagram.com/embed.js"></script>
 
+<div class="grad-bar"></div>
+
+<!-- SOCIAL — We Post Every Week -->
+<section class="section" id="social">
+  <div class="stag">Follow Along</div>
+  <h2>We post. <span class="ac">Every week.</span></h2>
+  <div class="social-grid">
+    <div>
+      <p class="section-sub" style="margin-bottom:0;">Every day, a new post goes out. Interview clips. Skits. Robot clips. Follow us on instagram.</p>
+      <div class="platform-list">
+        <a class="platform" href="https://www.instagram.com/coolnamepending.ftc" target="_blank" rel="noopener">
+          <div class="platform-icon p-ig">IG</div>
+          <div><span class="platform-name">Instagram</span><span class="platform-handle">@coolnamepending.ftc</span></div>
+        </a>
+        <a class="platform" href="https://coolnamepending.vercel.app" target="_blank" rel="noopener">
+          <div class="platform-icon p-web">CNP</div>
+          <div><span class="platform-name">Team Website</span><span class="platform-handle">coolnamepending.vercel.app</span></div>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="stag" style="margin-bottom:16px;">What we post</div>
+      <div class="sched">
+        <div class="sched-row"><div class="sched-day">Monday</div><div class="sched-content">FTC skits</div></div>
+        <div class="sched-row"><div class="sched-day">Wednesday</div><div class="sched-content">Progress on our robot</div></div>
+        <div class="sched-row"><div class="sched-day">Friday</div><div class="sched-content">Our competitions</div></div>
+        <div class="sched-row"><div class="sched-day">Sunday</div><div class="sched-content">New Clips from interview series</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
@@ -860,6 +853,7 @@ window.addEventListener('DOMContentLoaded',()=>{
         <li><a href="#mission">Mission</a></li>
         <li><a href="#events">Events</a></li>
         <li><a href="#initiatives">Initiatives</a></li>
+        <li><a href="#posts">Posts</a></li>
         <li><a href="#social">Social</a></li>
       </ul>
     </div>
@@ -867,7 +861,7 @@ window.addEventListener('DOMContentLoaded',()=>{
       <div class="fhead">Connect</div>
       <ul class="flinks">
         <li><a href="https://coolnamepending.vercel.app" target="_blank" rel="noopener">Team Site</a></li>
-        <li><a href="https://www.instagram.com/coolnamepending" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.instagram.com/coolnamepending.ftc" target="_blank" rel="noopener">Instagram</a></li>
       </ul>
     </div>
   </div>
@@ -878,19 +872,16 @@ window.addEventListener('DOMContentLoaded',()=>{
 </footer>
 
 <script>
-// LOGO
 const LOGO_SRC = (() => { try { return LOGO; } catch(e){ return ''; } })();
 window.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('img.dynamic-logo').forEach(el => { if(LOGO_SRC) el.src = LOGO_SRC; });
 
-  // SCROLL PROGRESS
   const bar = document.getElementById('scroll-progress');
   window.addEventListener('scroll', () => {
     const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
     bar.style.width = pct + '%';
   }, { passive: true });
 
-  // PARALLAX on hero
   const heroContent = document.querySelector('.hero-content');
   const heroPanel = document.querySelector('.hero-panel');
   window.addEventListener('scroll', () => {
@@ -899,7 +890,6 @@ window.addEventListener('DOMContentLoaded', () => {
     if (heroPanel)   heroPanel.style.transform   = `translateY(${y * 0.1}px)`;
   }, { passive: true });
 
-  // SCROLL REVEAL via IntersectionObserver
   const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
@@ -908,7 +898,6 @@ window.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
   revealEls.forEach(el => obs.observe(el));
 
-  // COUNTER ANIMATION for stat numbers
   function animateCount(el, target, suffix) {
     let start = 0;
     const dur = 1400;
@@ -935,7 +924,6 @@ window.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.5 });
   document.querySelectorAll('.pstat-val, .gnum').forEach(el => counterObs.observe(el));
 
-  // KINETIC MOUSE PARALLAX on orbs
   document.addEventListener('mousemove', (e) => {
     const cx = e.clientX / window.innerWidth - 0.5;
     const cy = e.clientY / window.innerHeight - 0.5;
