@@ -420,6 +420,22 @@ footer{position:relative;z-index:1;background:rgba(13,10,28,0.9);backdrop-filter
   .cat-nav{padding:20px;}
   .lesson-grid{grid-template-columns:1fr;}
 }
+
+  /* HUB TEASER SECTION */
+.hub-preview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px;}
+.hub-cat-card{background:var(--glass-bg);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:5px;padding:28px 26px;cursor:pointer;position:relative;overflow:hidden;transition:border-color 0.25s,transform 0.25s;}
+.hub-cat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad);opacity:0;transition:opacity 0.25s;}
+.hub-cat-card:hover{border-color:rgba(232,114,42,0.45);transform:translateY(-4px);}
+.hub-cat-card:hover::before{opacity:1;}
+.hcc-num{font-family:'Share Tech Mono',monospace;font-size:0.52rem;letter-spacing:0.2em;color:rgba(232,114,42,0.4);margin-bottom:10px;}
+.hcc-name{font-family:'Barlow Condensed',sans-serif;font-size:1.25rem;font-weight:700;color:var(--cream);letter-spacing:0.02em;margin-bottom:8px;}
+.hcc-desc{font-size:0.83rem;color:var(--dim);line-height:1.65;margin-bottom:16px;}
+.hcc-count{font-family:'Share Tech Mono',monospace;font-size:0.55rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--or);border-top:1px solid rgba(232,114,42,0.12);padding-top:12px;}
+.hub-enter-btn{font-family:'Share Tech Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;background:var(--grad);color:white;padding:14px 30px;border-radius:2px;border:none;cursor:pointer;display:flex;align-items:center;gap:12px;transition:opacity 0.2s,transform 0.2s;font-weight:600;}
+.hub-enter-btn:hover{opacity:0.85;transform:translateY(-2px);}
+@media(max-width:960px){.hub-preview-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.hub-preview-grid{grid-template-columns:1fr;}}
+  
 </style>
 </head>
 <body>
@@ -616,6 +632,26 @@ function showMain(){
 <script async src="https://www.instagram.com/embed.js"></script>
 <div class="grad-bar"></div>
 
+  <section class="section" id="hub-teaser">
+  <div class="stag reveal">Knowledge Hub</div>
+  <h2 class="reveal d1">Learn FTC. <span class="ac">Free. For everyone.</span></h2>
+  <p class="section-sub reveal d2">50 lessons across 6 areas — built by our team, open to any FTC student or team. Video dropping continuously.</p>
+  <div class="hub-preview-grid reveal d3">
+    <div class="hub-cat-card" onclick="showHub()"><div class="hcc-num">01</div><div class="hcc-name">Reach</div><div class="hcc-desc">Outreach strategy, community demos, and impact documentation</div><div class="hcc-count">8 lessons</div></div>
+    <div class="hub-cat-card" onclick="showHub()"><div class="hcc-num">02</div><div class="hcc-name">Connect</div><div class="hcc-desc">Mentors, professional networks, and cross-team collaboration</div><div class="hcc-count">8 lessons</div></div>
+    <div class="hub-cat-card" onclick="showHub()"><div class="hcc-num">03</div><div class="hcc-name">Innovate</div><div class="hcc-desc">Engineering design process, brainstorming, rapid prototyping</div><div class="hcc-count">9 lessons</div></div>
+    <div class="hub-cat-card" onclick="showHub()"><div class="hcc-num">04</div><div class="hcc-name">Funding &amp; Sustainability</div><div class="hcc-desc">Sponsorships, grants, budgets, and long-term team planning</div><div class="hcc-count">8 lessons</div></div>
+    <div class="hub-cat-card" onclick="showHub()"><div class="hcc-num">05</div><div class="hcc-name">Design &amp; Build</div><div class="hcc-desc">Drivetrains, subsystems, testing, iteration strategy</div><div class="hcc-count">9 lessons</div></div>
+    <div class="hub-cat-card" onclick="showHub()"><div class="hcc-num">06</div><div class="hcc-name">Control &amp; Software</div><div class="hcc-desc">TeleOp, autonomous, state machines, sensor integration</div><div class="hcc-count">8 lessons</div></div>
+  </div>
+  <div class="reveal d4" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;background:var(--glass-bg);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:5px;padding:28px 32px;">
+    <div style="font-size:1rem;color:var(--dim);line-height:1.7;">50 lessons · 6 categories · video format · <strong style="color:var(--cream);">always free</strong></div>
+    <button class="hub-enter-btn" onclick="showHub()">Enter the Knowledge Hub <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+  </div>
+</section>
+
+<div class="grad-bar"></div>
+  
 <section class="section" id="social">
   <div class="stag">Follow Along</div>
   <h2>We post. <span class="ac">Every week.</span></h2>
