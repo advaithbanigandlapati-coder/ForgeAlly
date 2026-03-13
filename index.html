@@ -7,265 +7,70 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500;600;700&family=Share+Tech+Mono&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root {
-  --or: #E8722A;
-  --or2: #F5954A;
-  --pu: #7B3FA0;
-  --pu2: #3D1D6B;
-  --bg: #080612;
-  --bg2: #0D0A1C;
-  --cream: #EAD8BC;
-  --dim: #9A8870;
-  --glass-bg: rgba(15,10,30,0.55);
-  --glass-border: rgba(232,114,42,0.18);
-  --grad: linear-gradient(120deg, var(--or), var(--pu));
-}
+:root{--or:#E8722A;--or2:#F5954A;--pu:#7B3FA0;--pu2:#3D1D6B;--bg:#080612;--bg2:#0D0A1C;--cream:#EAD8BC;--dim:#9A8870;--glass-bg:rgba(15,10,30,0.55);--glass-border:rgba(232,114,42,0.18);--grad:linear-gradient(120deg,var(--or),var(--pu));}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{
-  background:var(--bg);
-  color:var(--cream);
-  font-family:'Barlow',sans-serif;
-  font-weight:300;
-  overflow-x:hidden;
-}
-
-/* PURPLE AMBIENT */
-body::after{
-  content:'';
-  position:fixed;
-  width:700px;height:700px;
-  background:radial-gradient(circle,rgba(123,63,160,0.22) 0%,transparent 70%);
-  top:-200px;right:-200px;
-  pointer-events:none;z-index:0;
-}
-
-/* NAV */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:200;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:14px 52px;
-  background:rgba(8,6,18,0.8);
-  backdrop-filter:blur(20px);
-  border-bottom:1px solid rgba(232,114,42,0.15);
-}
-.nav-left{display:flex;align-items:center;gap:14px;text-decoration:none;}
+body{background:var(--bg);color:var(--cream);font-family:'Barlow',sans-serif;font-weight:300;overflow-x:hidden;}
+body::after{content:'';position:fixed;width:700px;height:700px;background:radial-gradient(circle,rgba(123,63,160,0.22) 0%,transparent 70%);top:-200px;right:-200px;pointer-events:none;z-index:0;}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:14px 52px;background:rgba(8,6,18,0.8);backdrop-filter:blur(20px);border-bottom:1px solid rgba(232,114,42,0.15);}
+.nav-left{display:flex;align-items:center;gap:14px;text-decoration:none;cursor:pointer;}
 .nav-logo{width:40px;height:40px;border-radius:50%;object-fit:cover;border:1.5px solid var(--or);}
 .nav-wordmark{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1rem;letter-spacing:0.08em;color:var(--cream);}
 .nav-wordmark small{display:block;font-size:0.58rem;font-weight:400;color:var(--or);letter-spacing:0.22em;font-family:'Share Tech Mono',monospace;}
 .nav-right{display:flex;align-items:center;gap:32px;}
-.nav-right a{
-  font-family:'Share Tech Mono',monospace;font-size:0.65rem;
-  letter-spacing:0.18em;text-transform:uppercase;
-  color:var(--dim);text-decoration:none;transition:color 0.2s;
-}
+.nav-right a{font-family:'Share Tech Mono',monospace;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--dim);text-decoration:none;transition:color 0.2s;cursor:pointer;}
 .nav-right a:hover{color:var(--or);}
-.nav-cta{
-  background:var(--grad)!important;
-  color:white!important;
-  padding:8px 22px;border-radius:2px;
-  font-weight:600!important;
-}
-
-/* HERO */
-.hero{
-  position:relative;z-index:1;
-  min-height:100vh;
-  display:flex;align-items:center;
-  padding:120px 52px 80px;
-  overflow:hidden;
-}
-.hero-ambient-or{
-  position:absolute;
-  width:500px;height:500px;
-  background:radial-gradient(circle,rgba(232,114,42,0.15) 0%,transparent 65%);
-  bottom:-100px;left:-100px;pointer-events:none;
-}
-.hero-inner{
-  max-width:1160px;width:100%;margin:0 auto;
-  display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:center;
-}
-
-.hero-eyebrow{
-  font-family:'Share Tech Mono',monospace;
-  font-size:0.65rem;letter-spacing:0.35em;text-transform:uppercase;
-  color:var(--or);margin-bottom:20px;
-  display:flex;align-items:center;gap:12px;
-}
+.nav-cta{background:var(--grad)!important;color:white!important;padding:8px 22px;border-radius:2px;font-weight:600!important;}
+.hero{position:relative;z-index:1;min-height:100vh;display:flex;align-items:center;padding:120px 52px 80px;overflow:hidden;}
+.hero-ambient-or{position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(232,114,42,0.15) 0%,transparent 65%);bottom:-100px;left:-100px;pointer-events:none;}
+.hero-inner{max-width:1160px;width:100%;margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:center;}
+.hero-eyebrow{font-family:'Share Tech Mono',monospace;font-size:0.65rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--or);margin-bottom:20px;display:flex;align-items:center;gap:12px;}
 .hero-eyebrow::before{content:'';width:36px;height:1px;background:var(--or);}
-h1{
-  font-family:'Barlow Condensed',sans-serif;
-  font-size:clamp(4rem,7.5vw,7rem);
-  font-weight:700;line-height:0.9;
-  letter-spacing:-0.02em;
-  margin-bottom:28px;
-}
+h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(4rem,7.5vw,7rem);font-weight:700;line-height:0.9;letter-spacing:-0.02em;margin-bottom:28px;}
 h1 .w1{color:var(--cream);display:block;}
-h1 .w2{
-  background:var(--grad);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-  background-clip:text;display:block;
-}
-.hero-sub{
-  font-size:1.1rem;line-height:1.75;color:var(--dim);
-  max-width:500px;margin-bottom:44px;
-}
+h1 .w2{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;}
+.hero-sub{font-size:1.1rem;line-height:1.75;color:var(--dim);max-width:500px;margin-bottom:44px;}
 .hero-sub strong{color:var(--cream);font-weight:500;}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
-
-.btn-fill{
-  font-family:'Share Tech Mono',monospace;font-size:0.72rem;
-  letter-spacing:0.1em;text-transform:uppercase;
-  text-decoration:none;
-  background:var(--grad);color:white;
-  padding:14px 34px;border-radius:2px;
-  transition:opacity 0.2s,transform 0.2s;
-  font-weight:600;
-}
+.btn-fill{font-family:'Share Tech Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;background:var(--grad);color:white;padding:14px 34px;border-radius:2px;transition:opacity 0.2s,transform 0.2s;font-weight:600;}
 .btn-fill:hover{opacity:0.82;transform:translateY(-2px);}
-.btn-line{
-  font-family:'Share Tech Mono',monospace;font-size:0.72rem;
-  letter-spacing:0.1em;text-transform:uppercase;
-  text-decoration:none;color:var(--cream);
-  padding:13px 34px;border-radius:2px;
-  border:1px solid rgba(234,216,188,0.22);
-  transition:border-color 0.2s,color 0.2s;
-}
+.btn-line{font-family:'Share Tech Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;color:var(--cream);padding:13px 34px;border-radius:2px;border:1px solid rgba(234,216,188,0.22);transition:border-color 0.2s,color 0.2s;}
 .btn-line:hover{border-color:var(--or);color:var(--or);}
-
-/* Hero right glass panel */
-.hero-panel{
-  background:var(--glass-bg);
-  backdrop-filter:blur(24px);
-  border:1px solid var(--glass-border);
-  border-radius:6px;
-  padding:40px 36px;
-  position:relative;overflow:hidden;
-}
-.hero-panel::before{
-  content:'';position:absolute;
-  top:0;left:0;right:0;height:3px;
-  background:var(--grad);
-}
-.panel-logo-wrap{
-  display:flex;justify-content:center;margin-bottom:36px;
-}
-.panel-logo{
-  width:140px;height:140px;border-radius:50%;object-fit:cover;
-  border:2px solid rgba(232,114,42,0.4);
-  box-shadow:0 0 40px rgba(232,114,42,0.2);
-}
-.panel-stats{
-  display:grid;grid-template-columns:1fr 1fr;gap:1px;
-  background:rgba(232,114,42,0.1);border-radius:4px;overflow:hidden;
-}
+.hero-panel{background:var(--glass-bg);backdrop-filter:blur(24px);border:1px solid var(--glass-border);border-radius:6px;padding:40px 36px;position:relative;overflow:hidden;}
+.hero-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);}
+.panel-logo-wrap{display:flex;justify-content:center;margin-bottom:36px;}
+.panel-logo{width:140px;height:140px;border-radius:50%;object-fit:cover;border:2px solid rgba(232,114,42,0.4);box-shadow:0 0 40px rgba(232,114,42,0.2);}
+.panel-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(232,114,42,0.1);border-radius:4px;overflow:hidden;}
 .pstat{background:rgba(8,6,18,0.7);padding:20px 16px;text-align:center;}
-.pstat-val{
-  font-family:'Rajdhani',sans-serif;font-size:2.4rem;font-weight:700;
-  background:var(--grad);-webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;background-clip:text;
-  line-height:1;margin-bottom:4px;
-}
-.pstat-lbl{
-  font-family:'Share Tech Mono',monospace;font-size:0.55rem;
-  letter-spacing:0.18em;text-transform:uppercase;color:var(--dim);
-}
-.panel-tag{
-  margin-top:28px;
-  font-family:'Share Tech Mono',monospace;font-size:0.6rem;
-  letter-spacing:0.2em;text-transform:uppercase;
-  text-align:center;color:var(--or);
-  border-top:1px solid rgba(232,114,42,0.15);padding-top:20px;
-}
-
-/* LAUNCH STRIP */
-.launch-strip{
-  position:relative;z-index:1;
-  background:var(--glass-bg);
-  backdrop-filter:blur(20px);
-  border-top:1px solid rgba(232,114,42,0.15);
-  border-bottom:1px solid rgba(123,63,160,0.2);
-  padding:22px 52px;
-  display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;
-}
-.strip-badge{
-  font-family:'Share Tech Mono',monospace;font-size:0.6rem;
-  letter-spacing:0.22em;text-transform:uppercase;
-  background:var(--or);color:#080612;
-  padding:5px 14px;border-radius:2px;font-weight:700;
-}
+.pstat-val{font-family:'Rajdhani',sans-serif;font-size:2.4rem;font-weight:700;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:4px;}
+.pstat-lbl{font-family:'Share Tech Mono',monospace;font-size:0.55rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--dim);}
+.panel-tag{margin-top:28px;font-family:'Share Tech Mono',monospace;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;text-align:center;color:var(--or);border-top:1px solid rgba(232,114,42,0.15);padding-top:20px;}
+.launch-strip{position:relative;z-index:1;background:var(--glass-bg);backdrop-filter:blur(20px);border-top:1px solid rgba(232,114,42,0.15);border-bottom:1px solid rgba(123,63,160,0.2);padding:22px 52px;display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;}
+.strip-badge{font-family:'Share Tech Mono',monospace;font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;background:var(--or);color:#080612;padding:5px 14px;border-radius:2px;font-weight:700;}
 .strip-text{font-size:0.95rem;color:var(--dim);}
 .strip-text strong{color:var(--cream);font-weight:600;}
-
-/* SECTION BASE */
 .section{position:relative;z-index:1;padding:100px 52px;max-width:1200px;margin:0 auto;}
 .full-section{position:relative;z-index:1;padding:100px 52px;}
 .full-section .inner{max-width:1200px;margin:0 auto;}
-
-.stag{
-  font-family:'Share Tech Mono',monospace;font-size:0.62rem;
-  letter-spacing:0.3em;text-transform:uppercase;
-  color:var(--or);margin-bottom:12px;
-  display:flex;align-items:center;gap:8px;
-}
+.stag{font-family:'Share Tech Mono',monospace;font-size:0.62rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--or);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
 .stag::before{content:'//';color:var(--pu);margin-right:4px;}
-h2{
-  font-family:'Barlow Condensed',sans-serif;
-  font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:700;
-  letter-spacing:-0.01em;line-height:0.95;color:var(--cream);
-  margin-bottom:20px;
-}
-h2 .ac{
-  background:var(--grad);-webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;background-clip:text;
-}
+h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:700;letter-spacing:-0.01em;line-height:0.95;color:var(--cream);margin-bottom:20px;}
+h2 .ac{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .section-sub{font-size:1rem;color:var(--dim);line-height:1.8;max-width:560px;margin-bottom:56px;}
-
-/* MISSION */
 .mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-top:56px;}
-.big-quote{
-  font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.6rem,2.5vw,2.2rem);
-  font-weight:700;line-height:1.2;color:var(--cream);
-  border-left:3px solid var(--or);padding-left:24px;margin-bottom:36px;
-}
-.big-quote .glow{
-  background:var(--grad);-webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;background-clip:text;
-}
+.big-quote{font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:700;line-height:1.2;color:var(--cream);border-left:3px solid var(--or);padding-left:24px;margin-bottom:36px;}
+.big-quote .glow{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .mission-body p{font-size:1rem;line-height:1.85;color:var(--dim);margin-bottom:18px;}
 .mission-body strong{color:var(--cream);font-weight:500;}
 .serve-list{display:flex;flex-direction:column;gap:12px;}
-.serve-item{
-  display:flex;align-items:center;gap:18px;
-  background:var(--glass-bg);backdrop-filter:blur(16px);
-  border:1px solid var(--glass-border);border-radius:4px;
-  padding:18px 22px;
-  transition:border-color 0.25s,transform 0.25s;
-}
+.serve-item{display:flex;align-items:center;gap:18px;background:var(--glass-bg);backdrop-filter:blur(16px);border:1px solid var(--glass-border);border-radius:4px;padding:18px 22px;transition:border-color 0.25s,transform 0.25s;}
 .serve-item:hover{border-color:rgba(232,114,42,0.5);transform:translateX(5px);}
 .serve-dot{width:8px;height:8px;border-radius:50%;background:var(--grad);flex-shrink:0;}
 .serve-text{font-size:0.95rem;font-weight:500;color:var(--cream);}
-
-/* EVENT */
-.event-section{
-  background:rgba(13,10,28,0.7);
-  backdrop-filter:blur(20px);
-  border-top:1px solid rgba(123,63,160,0.2);
-  border-bottom:1px solid rgba(123,63,160,0.2);
-}
-.event-card{
-  display:grid;grid-template-columns:180px 1fr;
-  background:var(--glass-bg);backdrop-filter:blur(24px);
-  border:1px solid var(--glass-border);border-radius:6px;
-  overflow:hidden;max-width:680px;
-  transition:border-color 0.3s,transform 0.3s;
-}
+.event-section{background:rgba(13,10,28,0.7);backdrop-filter:blur(20px);border-top:1px solid rgba(123,63,160,0.2);border-bottom:1px solid rgba(123,63,160,0.2);}
+.event-card{display:grid;grid-template-columns:180px 1fr;background:var(--glass-bg);backdrop-filter:blur(24px);border:1px solid var(--glass-border);border-radius:6px;overflow:hidden;max-width:680px;transition:border-color 0.3s,transform 0.3s;}
 .event-card:hover{border-color:var(--or);transform:translateY(-4px);}
-.event-date{
-  background:var(--grad);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  padding:32px 20px;text-align:center;
-}
+.event-date{background:var(--grad);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 20px;text-align:center;}
 .ev-month{font-family:'Share Tech Mono',monospace;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.8);}
 .ev-day{font-family:'Rajdhani',sans-serif;font-size:3.2rem;font-weight:700;color:white;line-height:1;}
 .ev-year{font-family:'Share Tech Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;color:rgba(255,255,255,0.7);}
@@ -274,241 +79,74 @@ h2 .ac{
 .ev-title{font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:700;color:var(--cream);margin-bottom:8px;}
 .ev-loc{font-size:0.88rem;color:var(--dim);margin-bottom:14px;letter-spacing:0.02em;}
 .ev-desc{font-size:0.9rem;color:var(--dim);line-height:1.75;}
-.ev-pill{
-  display:inline-block;margin-top:16px;
-  font-family:'Share Tech Mono',monospace;font-size:0.58rem;
-  letter-spacing:0.15em;text-transform:uppercase;
-  border:1px solid rgba(123,63,160,0.4);
-  padding:5px 14px;border-radius:2px;
-  color:#B07FD0;
-}
-
-/* INITIATIVES */
+.ev-pill{display:inline-block;margin-top:16px;font-family:'Share Tech Mono',monospace;font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;border:1px solid rgba(123,63,160,0.4);padding:5px 14px;border-radius:2px;color:#B07FD0;}
 .init-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
-.init-card{
-  background:var(--glass-bg);backdrop-filter:blur(20px);
-  border:1px solid var(--glass-border);border-radius:6px;
-  padding:36px;position:relative;overflow:hidden;
-  transition:border-color 0.3s,transform 0.3s;
-}
+.init-card{background:var(--glass-bg);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:6px;padding:36px;position:relative;overflow:hidden;transition:border-color 0.3s,transform 0.3s;}
 .init-card:hover{border-color:rgba(232,114,42,0.45);transform:translateY(-4px);}
-.init-card::after{
-  content:attr(data-n);
-  position:absolute;top:-12px;right:18px;
-  font-family:'Rajdhani',sans-serif;font-size:5.5rem;font-weight:700;
-  color:rgba(232,114,42,0.06);line-height:1;pointer-events:none;
-}
-.init-card::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:2px;
-  background:var(--grad);opacity:0;transition:opacity 0.3s;
-}
+.init-card::after{content:attr(data-n);position:absolute;top:-12px;right:18px;font-family:'Rajdhani',sans-serif;font-size:5.5rem;font-weight:700;color:rgba(232,114,42,0.06);line-height:1;pointer-events:none;}
+.init-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad);opacity:0;transition:opacity 0.3s;}
 .init-card:hover::before{opacity:1;}
-.init-name{
-  font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:700;
-  color:var(--cream);margin-bottom:12px;
-  text-transform:uppercase;letter-spacing:0.04em;
-}
+.init-name{font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:700;color:var(--cream);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.04em;}
 .init-desc{font-size:0.9rem;line-height:1.75;color:var(--dim);margin-bottom:20px;}
 .init-tags{display:flex;flex-wrap:wrap;gap:8px;}
-.init-tag{
-  font-family:'Share Tech Mono',monospace;font-size:0.56rem;
-  letter-spacing:0.14em;text-transform:uppercase;
-  padding:4px 11px;border-radius:2px;
-  background:rgba(232,114,42,0.07);
-  color:var(--or);border:1px solid rgba(232,114,42,0.18);
-}
-
-/* GOALS */
-.goals-bg{
-  background:rgba(13,10,28,0.7);
-  border-top:1px solid rgba(123,63,160,0.15);
-  border-bottom:1px solid rgba(123,63,160,0.15);
-}
-.goals-grid{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
-  background:rgba(232,114,42,0.1);
-  border:1px solid rgba(232,114,42,0.1);border-radius:6px;overflow:hidden;
-  margin-top:48px;
-}
-.gcell{
-  background:rgba(8,6,18,0.85);padding:40px 24px;text-align:center;
-  backdrop-filter:blur(12px);
-  transition:background 0.25s;
-}
+.init-tag{font-family:'Share Tech Mono',monospace;font-size:0.56rem;letter-spacing:0.14em;text-transform:uppercase;padding:4px 11px;border-radius:2px;background:rgba(232,114,42,0.07);color:var(--or);border:1px solid rgba(232,114,42,0.18);}
+.goals-bg{background:rgba(13,10,28,0.7);border-top:1px solid rgba(123,63,160,0.15);border-bottom:1px solid rgba(123,63,160,0.15);}
+.goals-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(232,114,42,0.1);border:1px solid rgba(232,114,42,0.1);border-radius:6px;overflow:hidden;margin-top:48px;}
+.gcell{background:rgba(8,6,18,0.85);padding:40px 24px;text-align:center;backdrop-filter:blur(12px);transition:background 0.25s;}
 .gcell:hover{background:rgba(15,10,30,0.95);}
-.gnum{
-  font-family:'Rajdhani',sans-serif;font-size:3.8rem;font-weight:700;
-  background:var(--grad);-webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;background-clip:text;
-  line-height:1;margin-bottom:8px;
-}
+.gnum{font-family:'Rajdhani',sans-serif;font-size:3.8rem;font-weight:700;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:8px;}
 .glbl{font-size:0.85rem;color:var(--dim);line-height:1.5;}
 .glbl strong{display:block;color:var(--cream);font-size:0.95rem;margin-bottom:3px;font-weight:500;}
-
-/* POSTS */
 .posts-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;}
 .post-wrap{display:flex;flex-direction:column;gap:12px;}
-.post-label{
-  font-family:'Share Tech Mono',monospace;font-size:0.6rem;
-  letter-spacing:0.25em;text-transform:uppercase;color:var(--or);
-}
-
-/* SOCIAL */
+.post-label{font-family:'Share Tech Mono',monospace;font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--or);}
 .social-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
 .platform-list{display:flex;flex-direction:column;gap:14px;margin-top:40px;}
-.platform{
-  display:flex;align-items:center;gap:18px;
-  background:var(--glass-bg);backdrop-filter:blur(20px);
-  border:1px solid var(--glass-border);border-radius:4px;
-  padding:18px 22px;text-decoration:none;
-  transition:border-color 0.25s,transform 0.25s;
-}
+.platform{display:flex;align-items:center;gap:18px;background:var(--glass-bg);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:4px;padding:18px 22px;text-decoration:none;transition:border-color 0.25s,transform 0.25s;}
 .platform:hover{border-color:var(--or);transform:translateX(5px);}
-.platform-icon{
-  width:42px;height:42px;border-radius:4px;
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Rajdhani',sans-serif;font-weight:700;font-size:0.9rem;
-  color:white;flex-shrink:0;letter-spacing:0.05em;
-}
+.platform-icon{width:42px;height:42px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:0.9rem;color:white;flex-shrink:0;letter-spacing:0.05em;}
 .p-ig{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);}
 .p-web{background:var(--grad);}
 .platform-name{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:1.1rem;color:var(--cream);display:block;}
 .platform-handle{font-family:'Share Tech Mono',monospace;font-size:0.6rem;color:var(--dim);letter-spacing:0.1em;display:block;margin-top:2px;}
-
-.sched{
-  background:var(--glass-bg);backdrop-filter:blur(20px);
-  border:1px solid var(--glass-border);border-radius:6px;
-  overflow:hidden;margin-top:40px;
-}
-.sched-row{
-  display:grid;grid-template-columns:96px 1fr;
-  border-bottom:1px solid rgba(232,114,42,0.07);
-}
+.sched{background:var(--glass-bg);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:6px;overflow:hidden;margin-top:40px;}
+.sched-row{display:grid;grid-template-columns:96px 1fr;border-bottom:1px solid rgba(232,114,42,0.07);}
 .sched-row:last-child{border-bottom:none;}
-.sched-day{
-  padding:18px 16px;
-  font-family:'Share Tech Mono',monospace;font-size:0.6rem;
-  letter-spacing:0.18em;text-transform:uppercase;color:var(--or);
-  background:rgba(8,6,18,0.6);
-  display:flex;align-items:center;
-  border-right:1px solid rgba(232,114,42,0.07);
-}
-.sched-content{
-  padding:18px 20px;font-size:0.88rem;color:var(--dim);
-  background:rgba(13,10,28,0.4);display:flex;align-items:center;
-}
-
-/* FOOTER */
-footer{
-  position:relative;z-index:1;
-  background:rgba(13,10,28,0.9);
-  backdrop-filter:blur(20px);
-  border-top:1px solid rgba(232,114,42,0.12);
-  padding:60px 52px 36px;
-}
-.footer-top{
-  max-width:1200px;margin:0 auto;
-  display:grid;grid-template-columns:1fr 1fr 1fr;gap:56px;margin-bottom:48px;
-}
+.sched-day{padding:18px 16px;font-family:'Share Tech Mono',monospace;font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--or);background:rgba(8,6,18,0.6);display:flex;align-items:center;border-right:1px solid rgba(232,114,42,0.07);}
+.sched-content{padding:18px 20px;font-size:0.88rem;color:var(--dim);background:rgba(13,10,28,0.4);display:flex;align-items:center;}
+footer{position:relative;z-index:1;background:rgba(13,10,28,0.9);backdrop-filter:blur(20px);border-top:1px solid rgba(232,114,42,0.12);padding:60px 52px 36px;}
+.footer-top{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:56px;margin-bottom:48px;}
 .footer-logo{width:56px;height:56px;border-radius:50%;object-fit:cover;border:1.5px solid var(--or);margin-bottom:16px;display:block;}
 .footer-brand p{font-size:0.88rem;color:var(--dim);line-height:1.75;max-width:220px;}
 .fhead{font-family:'Share Tech Mono',monospace;font-size:0.58rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--or);margin-bottom:18px;}
 .flinks{list-style:none;display:flex;flex-direction:column;gap:10px;}
-.flinks a{font-size:0.9rem;color:var(--dim);text-decoration:none;transition:color 0.2s;}
+.flinks a{font-size:0.9rem;color:var(--dim);text-decoration:none;transition:color 0.2s;cursor:pointer;}
 .flinks a:hover{color:var(--or);}
-.footer-bottom{
-  max-width:1200px;margin:0 auto;
-  display:flex;justify-content:space-between;align-items:center;
-  padding-top:28px;border-top:1px solid rgba(255,255,255,0.04);
-}
+.footer-bottom{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding-top:28px;border-top:1px solid rgba(255,255,255,0.04);}
 .fcopy{font-family:'Share Tech Mono',monospace;font-size:0.6rem;letter-spacing:0.12em;color:var(--dim);}
 .fcopy span{color:var(--or);}
 .grad-bar{width:100%;height:2px;background:var(--grad);position:relative;z-index:1;}
-
-/* ANIMATIONS */
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
 .hero-content{animation:fadeUp 0.75s ease forwards;}
 .hero-panel{animation:fadeUp 0.75s 0.15s ease forwards;opacity:0;animation-fill-mode:forwards;}
-
-/* CUSTOM SCROLLBAR */
 ::-webkit-scrollbar{width:6px;}
 ::-webkit-scrollbar-track{background:var(--bg);}
 ::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--or),var(--pu));border-radius:3px;}
 ::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,var(--or2),var(--pu));}
-
-/* SCROLL PROGRESS BAR */
-#scroll-progress{
-  position:fixed;top:0;left:0;height:3px;width:0%;
-  background:var(--grad);z-index:9999;
-  box-shadow:0 0 10px rgba(232,114,42,0.6);
-  pointer-events:none;
-}
-
-/* KINETIC ORBS */
+#scroll-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:var(--grad);z-index:9999;box-shadow:0 0 10px rgba(232,114,42,0.6);pointer-events:none;}
 .orb{position:fixed;border-radius:50%;pointer-events:none;z-index:0;filter:blur(90px);}
-.orb-1{
-  width:600px;height:600px;
-  background:radial-gradient(circle,rgba(232,114,42,0.11) 0%,transparent 70%);
-  top:-150px;left:-150px;
-  animation:orbDrift1 20s ease-in-out infinite;
-}
-.orb-2{
-  width:500px;height:500px;
-  background:radial-gradient(circle,rgba(123,63,160,0.16) 0%,transparent 70%);
-  bottom:-100px;right:-100px;
-  animation:orbDrift2 25s ease-in-out infinite;
-}
-.orb-3{
-  width:280px;height:280px;
-  background:radial-gradient(circle,rgba(245,149,74,0.07) 0%,transparent 70%);
-  top:45%;left:48%;
-  animation:orbDrift3 15s ease-in-out infinite;
-}
-@keyframes orbDrift1{
-  0%,100%{transform:translate(0,0);}
-  33%{transform:translate(90px,130px);}
-  66%{transform:translate(-50px,70px);}
-}
-@keyframes orbDrift2{
-  0%,100%{transform:translate(0,0);}
-  33%{transform:translate(-110px,-90px);}
-  66%{transform:translate(70px,-50px);}
-}
-@keyframes orbDrift3{
-  0%,100%{transform:scale(1) translate(0,0);}
-  50%{transform:scale(1.5) translate(30px,-30px);}
-}
-
-/* MARQUEE TICKER */
-.marquee-wrap{
-  position:relative;z-index:2;overflow:hidden;
-  background:rgba(232,114,42,0.05);
-  border-top:1px solid rgba(232,114,42,0.14);
-  border-bottom:1px solid rgba(232,114,42,0.14);
-  padding:13px 0;backdrop-filter:blur(10px);
-}
-.marquee-track{
-  display:flex;width:max-content;
-  animation:marquee 30s linear infinite;
-}
+.orb-1{width:600px;height:600px;background:radial-gradient(circle,rgba(232,114,42,0.11) 0%,transparent 70%);top:-150px;left:-150px;animation:orbDrift1 20s ease-in-out infinite;}
+.orb-2{width:500px;height:500px;background:radial-gradient(circle,rgba(123,63,160,0.16) 0%,transparent 70%);bottom:-100px;right:-100px;animation:orbDrift2 25s ease-in-out infinite;}
+.orb-3{width:280px;height:280px;background:radial-gradient(circle,rgba(245,149,74,0.07) 0%,transparent 70%);top:45%;left:48%;animation:orbDrift3 15s ease-in-out infinite;}
+@keyframes orbDrift1{0%,100%{transform:translate(0,0);}33%{transform:translate(90px,130px);}66%{transform:translate(-50px,70px);}}
+@keyframes orbDrift2{0%,100%{transform:translate(0,0);}33%{transform:translate(-110px,-90px);}66%{transform:translate(70px,-50px);}}
+@keyframes orbDrift3{0%,100%{transform:scale(1) translate(0,0);}50%{transform:scale(1.5) translate(30px,-30px);}}
+.marquee-wrap{position:relative;z-index:2;overflow:hidden;background:rgba(232,114,42,0.05);border-top:1px solid rgba(232,114,42,0.14);border-bottom:1px solid rgba(232,114,42,0.14);padding:13px 0;backdrop-filter:blur(10px);}
+.marquee-track{display:flex;width:max-content;animation:marquee 30s linear infinite;}
 .marquee-track:hover{animation-play-state:paused;}
-.marquee-item{
-  font-family:'Share Tech Mono',monospace;
-  font-size:0.62rem;letter-spacing:0.3em;text-transform:uppercase;
-  color:var(--or);white-space:nowrap;padding:0 36px;
-  display:flex;align-items:center;gap:36px;
-}
-.marquee-item::after{
-  content:'';display:inline-block;
-  width:4px;height:4px;border-radius:50%;
-  background:var(--pu);flex-shrink:0;
-}
-@keyframes marquee{
-  from{transform:translateX(0);}
-  to{transform:translateX(-50%);}
-}
-
-/* SCROLL REVEAL */
+.marquee-item{font-family:'Share Tech Mono',monospace;font-size:0.62rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--or);white-space:nowrap;padding:0 36px;display:flex;align-items:center;gap:36px;}
+.marquee-item::after{content:'';display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--pu);flex-shrink:0;}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 .reveal{opacity:0;transform:translateY(44px);transition:opacity 0.75s cubic-bezier(0.16,1,0.3,1),transform 0.75s cubic-bezier(0.16,1,0.3,1);}
 .reveal.visible{opacity:1;transform:translateY(0);}
 .reveal-left{opacity:0;transform:translateX(-52px);transition:opacity 0.75s cubic-bezier(0.16,1,0.3,1),transform 0.75s cubic-bezier(0.16,1,0.3,1);}
@@ -518,23 +156,254 @@ footer{
 .reveal-scale{opacity:0;transform:scale(0.9);transition:opacity 0.65s cubic-bezier(0.16,1,0.3,1),transform 0.65s cubic-bezier(0.16,1,0.3,1);}
 .reveal-scale.visible{opacity:1;transform:scale(1);}
 .d1{transition-delay:0.05s;}.d2{transition-delay:0.14s;}.d3{transition-delay:0.23s;}.d4{transition-delay:0.32s;}
-
-/* LOGO PULSE */
 .panel-logo{animation:logoPulse 4s ease-in-out infinite;}
-@keyframes logoPulse{
-  0%,100%{box-shadow:0 0 30px rgba(232,114,42,0.2);}
-  50%{box-shadow:0 0 65px rgba(232,114,42,0.5),0 0 110px rgba(123,63,160,0.2);}
+@keyframes logoPulse{0%,100%{box-shadow:0 0 30px rgba(232,114,42,0.2);}50%{box-shadow:0 0 65px rgba(232,114,42,0.5),0 0 110px rgba(123,63,160,0.2);}}
+.grad-bar{background:linear-gradient(120deg,var(--or),var(--pu),var(--or));background-size:200% 100%;animation:gradShift 4s linear infinite;}
+@keyframes gradShift{from{background-position:0%}to{background-position:200%}}
+/* PAGE SWITCHER */
+#main-site.hidden{display:none;}
+#hub-page{display:none;position:relative;z-index:1;}
+#hub-page.active{display:block;}
+
+/* TIER LEGEND */
+.tier-legend{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:40px;margin-top:-20px;}
+.tier-chip{font-family:'Share Tech Mono',monospace;font-size:0.55rem;letter-spacing:0.18em;text-transform:uppercase;padding:6px 14px;border-radius:2px;display:flex;align-items:center;gap:8px;}
+.tier-chip::before{content:'';width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+.t-beg{background:rgba(46,180,100,0.1);border:1px solid rgba(46,180,100,0.3);color:#5fd68a;}
+.t-beg::before{background:#5fd68a;}
+.t-adv{background:rgba(232,114,42,0.1);border:1px solid rgba(232,114,42,0.3);color:#E8722A;}
+.t-adv::before{background:#E8722A;}
+.t-exp{background:rgba(123,63,160,0.12);border:1px solid rgba(123,63,160,0.35);color:#B07FD0;}
+.t-exp::before{background:#B07FD0;}
+
+.hub-hero{
+  position:relative;z-index:1;
+  padding:160px 52px 80px;
+  max-width:1200px;margin:0 auto;
+}
+.hub-eyebrow{
+  font-family:'Share Tech Mono',monospace;
+  font-size:0.65rem;letter-spacing:0.35em;text-transform:uppercase;
+  color:var(--or);margin-bottom:18px;
+  display:flex;align-items:center;gap:12px;
+  opacity:0;animation:fadeUp 0.6s 0.1s forwards;
+}
+.hub-eyebrow::before{content:'';width:36px;height:1px;background:var(--or);}
+.hub-hero h1{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:clamp(3.2rem,6vw,5.8rem);
+  font-weight:700;line-height:0.92;
+  letter-spacing:-0.02em;
+  margin-bottom:24px;
+  opacity:0;animation:fadeUp 0.6s 0.2s forwards;
+}
+.hub-hero h1 .w1{color:var(--cream);display:block;}
+.hub-hero h1 .w2{
+  background:var(--grad);-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;background-clip:text;display:block;
+}
+.hub-desc{
+  font-size:1.05rem;line-height:1.8;color:var(--dim);
+  max-width:620px;margin-bottom:52px;
+  opacity:0;animation:fadeUp 0.6s 0.3s forwards;
+}
+.hub-desc strong{color:var(--cream);font-weight:500;}
+
+/* STATS ROW */
+.hub-stats{
+  display:flex;gap:2px;
+  background:rgba(232,114,42,0.08);
+  border:1px solid rgba(232,114,42,0.1);
+  border-radius:4px;overflow:hidden;
+  max-width:640px;
+  opacity:0;animation:fadeUp 0.6s 0.4s forwards;
+  margin-bottom:0;
+}
+.hstat{
+  flex:1;padding:20px 18px;text-align:center;
+  background:rgba(8,6,18,0.7);
+}
+.hstat-val{
+  font-family:'Rajdhani',sans-serif;font-size:2rem;font-weight:700;
+  background:var(--grad);-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;background-clip:text;
+  line-height:1;margin-bottom:4px;
+}
+.hstat-lbl{
+  font-family:'Share Tech Mono',monospace;font-size:0.52rem;
+  letter-spacing:0.16em;text-transform:uppercase;color:var(--dim);
 }
 
-/* ANIMATED GRAD BAR */
+/* GRAD BAR */
 .grad-bar{
+  width:100%;height:2px;
   background:linear-gradient(120deg,var(--or),var(--pu),var(--or));
   background-size:200% 100%;
   animation:gradShift 4s linear infinite;
+  position:relative;z-index:1;
 }
 @keyframes gradShift{from{background-position:0%}to{background-position:200%}}
 
-/* RESPONSIVE */
+/* CATEGORY NAV PILLS */
+.cat-nav{
+  position:relative;z-index:10;
+  padding:28px 52px;
+  display:flex;flex-wrap:wrap;gap:10px;
+  background:rgba(8,6,18,0.7);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(232,114,42,0.08);
+}
+.cat-pill{
+  font-family:'Share Tech Mono',monospace;font-size:0.6rem;
+  letter-spacing:0.18em;text-transform:uppercase;
+  padding:8px 18px;border-radius:2px;
+  background:var(--glass-bg);
+  border:1px solid var(--glass-border);
+  color:var(--dim);text-decoration:none;
+  transition:border-color 0.2s,color 0.2s,background 0.2s;
+  cursor:pointer;
+}
+.cat-pill:hover,.cat-pill.active{
+  border-color:var(--or);color:var(--or);
+  background:rgba(232,114,42,0.06);
+}
+
+/* MAIN CONTENT */
+.hub-body{
+  position:relative;z-index:1;
+  max-width:1200px;margin:0 auto;
+  padding:72px 52px 100px;
+}
+
+/* CATEGORY BLOCK */
+.cat-block{margin-bottom:80px;}
+.cat-header{
+  display:flex;align-items:baseline;gap:20px;
+  margin-bottom:32px;
+  padding-bottom:16px;
+  border-bottom:1px solid rgba(232,114,42,0.12);
+}
+.cat-num{
+  font-family:'Rajdhani',sans-serif;font-size:4rem;font-weight:700;
+  color:rgba(232,114,42,0.08);line-height:1;flex-shrink:0;
+}
+.cat-title-wrap{}
+.cat-tag{
+  font-family:'Share Tech Mono',monospace;font-size:0.58rem;
+  letter-spacing:0.28em;text-transform:uppercase;color:var(--or);
+  margin-bottom:4px;display:flex;align-items:center;gap:6px;
+}
+.cat-tag::before{content:'//';color:var(--pu);}
+.cat-name{
+  font-family:'Barlow Condensed',sans-serif;font-size:2.2rem;font-weight:700;
+  color:var(--cream);letter-spacing:-0.01em;
+}
+.cat-desc{
+  font-size:0.88rem;color:var(--dim);line-height:1.7;
+  max-width:560px;margin-top:6px;
+}
+
+/* LESSON GRID */
+.lesson-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:16px;
+}
+.lesson-card{
+  background:var(--glass-bg);
+  backdrop-filter:blur(16px);
+  border:1px solid var(--glass-border);
+  border-radius:5px;
+  padding:22px 24px;
+  position:relative;
+  overflow:hidden;
+  transition:border-color 0.25s,transform 0.25s;
+  cursor:default;
+}
+.lesson-card::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:2px;
+  background:var(--grad);opacity:0;
+  transition:opacity 0.25s;
+}
+.lesson-card:hover{
+  border-color:rgba(232,114,42,0.35);
+  transform:translateY(-3px);
+}
+.lesson-card:hover::before{opacity:1;}
+.lesson-top{
+  display:flex;align-items:flex-start;justify-content:space-between;
+  gap:12px;margin-bottom:10px;
+}
+.lesson-num{
+  font-family:'Share Tech Mono',monospace;font-size:0.52rem;
+  letter-spacing:0.15em;color:rgba(232,114,42,0.45);flex-shrink:0;
+}
+.lesson-badge{
+  font-family:'Share Tech Mono',monospace;font-size:0.5rem;
+  letter-spacing:0.15em;text-transform:uppercase;
+  padding:3px 9px;border-radius:2px;
+  background:rgba(123,63,160,0.12);
+  border:1px solid rgba(123,63,160,0.25);
+  color:#B07FD0;flex-shrink:0;
+}
+.lesson-title{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:1.05rem;font-weight:600;
+  color:var(--cream);line-height:1.25;
+  margin-bottom:8px;
+  letter-spacing:0.01em;
+}
+.lesson-type{
+  font-family:'Share Tech Mono',monospace;font-size:0.52rem;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--dim);display:flex;align-items:center;gap:6px;
+}
+.lesson-type::before{
+  content:'';width:3px;height:3px;border-radius:50%;
+  background:var(--or);opacity:0.5;flex-shrink:0;
+}
+.lesson-soon{
+  position:absolute;bottom:0;left:0;right:0;
+  height:2px;
+  background:rgba(232,114,42,0.07);
+}
+
+/* SCROLL REVEAL */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity 0.65s cubic-bezier(0.16,1,0.3,1),transform 0.65s cubic-bezier(0.16,1,0.3,1);}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.d1{transition-delay:0.04s;}.d2{transition-delay:0.1s;}.d3{transition-delay:0.16s;}
+.d4{transition-delay:0.22s;}.d5{transition-delay:0.28s;}.d6{transition-delay:0.34s;}
+.d7{transition-delay:0.4s;}.d8{transition-delay:0.46s;}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+
+/* FOOTER */
+.hub-footer{
+  position:relative;z-index:1;
+  background:rgba(13,10,28,0.9);
+  backdrop-filter:blur(20px);
+  border-top:1px solid rgba(232,114,42,0.1);
+  padding:36px 52px;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;
+}
+.hub-footer a{
+  font-family:'Share Tech Mono',monospace;font-size:0.6rem;
+  letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--or);text-decoration:none;
+}
+.fcopy{font-family:'Share Tech Mono',monospace;font-size:0.58rem;letter-spacing:0.1em;color:var(--dim);}
+.fcopy span{color:var(--or);}
+
+@media(max-width:768px){
+  nav{padding:14px 20px;}
+  .nav-right a:not(.nav-back){display:none;}
+  .hub-hero,.hub-body{padding-left:20px;padding-right:20px;}
+  .cat-nav{padding:20px;}
+  .lesson-grid{grid-template-columns:1fr;}
+  .hub-footer{padding:28px 20px;flex-direction:column;gap:10px;}
+}
+
 @media(max-width:960px){
   nav{padding:14px 24px;}
   .nav-right a:not(.nav-cta){display:none;}
@@ -547,6 +416,9 @@ footer{
   .footer-top{grid-template-columns:1fr;}
   .footer-bottom{flex-direction:column;gap:10px;text-align:center;}
   .event-card{grid-template-columns:120px 1fr;}
+  .hub-hero,.hub-body{padding-left:20px;padding-right:20px;}
+  .cat-nav{padding:20px;}
+  .lesson-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -556,111 +428,82 @@ const LOGO = "data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJ
 window.addEventListener('DOMContentLoaded',()=>{
   document.querySelectorAll('img.dynamic-logo').forEach(el=>el.src=LOGO);
 });
+function showHub(){
+  document.getElementById('main-site').classList.add('hidden');
+  document.getElementById('hub-page').classList.add('active');
+  window.scrollTo(0,0);
+  // re-trigger hub reveals
+  setTimeout(()=>{
+    document.querySelectorAll('#hub-page .reveal').forEach(el=>el.classList.remove('visible'));
+    const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+    document.querySelectorAll('#hub-page .reveal').forEach(el=>obs.observe(el));
+  },50);
+}
+function showMain(){
+  document.getElementById('hub-page').classList.remove('active');
+  document.getElementById('main-site').classList.remove('hidden');
+  window.scrollTo(0,0);
+}
 </script>
 
-<!-- KINETIC ELEMENTS -->
 <div id="scroll-progress"></div>
 <div class="orb orb-1"></div>
 <div class="orb orb-2"></div>
 <div class="orb orb-3"></div>
 
-<!-- NAV -->
 <nav>
-  <a href="https://coolnamepending.vercel.app" target="_blank" rel="noopener" class="nav-left">
+  <a onclick="showMain();return false;" class="nav-left">
     <img class="nav-logo dynamic-logo" src="" alt="Forge Ally Logo">
     <div class="nav-wordmark">Forge Ally<small>Cool Name Pending #30439</small></div>
   </a>
   <div class="nav-right">
-    <a href="#mission">Mission</a>
-    <a href="#events">Events</a>
-    <a href="#initiatives">Initiatives</a>
-    <a href="#posts">Posts</a>
+    <a href="#mission" onclick="showMain();">Mission</a>
+    <a href="#events" onclick="showMain();">Events</a>
+    <a href="#initiatives" onclick="showMain();">Initiatives</a>
+    <a href="#posts" onclick="showMain();">Posts</a>
+    <a onclick="showHub();return false;">Knowledge Hub</a>
     <a href="https://www.instagram.com/coolnamepending.ftc" target="_blank" rel="noopener" class="nav-cta">Instagram</a>
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- ═══════════════════ MAIN SITE ═══════════════════ -->
+<div id="main-site">
+
 <section class="hero">
   <div class="hero-ambient-or"></div>
   <div class="hero-inner">
     <div class="hero-content">
       <div class="hero-eyebrow">FTC Team #30439 — Launched March 7, 2026</div>
-      <h1>
-        <span class="w1">Forge Your</span>
-        <span class="w2">Path.</span>
-      </h1>
-      <p class="hero-sub">
-        Forge Ally brings students who don't see themselves in STEM into robotics and the FIRST community —
-        <strong>girls, neurodivergent thinkers, and anyone who doesn't see themselves in STEM.</strong>
-      </p>
+      <h1><span class="w1">Forge Your</span><span class="w2">Path.</span></h1>
+      <p class="hero-sub">Forge Ally brings students who don't see themselves in STEM into robotics and the FIRST community — <strong>girls, neurodivergent thinkers, and anyone who doesn't see themselves in STEM.</strong></p>
       <div class="hero-actions">
         <a href="#initiatives" class="btn-fill">See the Initiative</a>
         <a href="https://coolnamepending.vercel.app" target="_blank" rel="noopener" class="btn-line">Our Team</a>
       </div>
     </div>
     <div class="hero-panel">
-      <div class="panel-logo-wrap">
-        <img class="panel-logo dynamic-logo" src="" alt="Forge Ally">
-      </div>
+      <div class="panel-logo-wrap"><img class="panel-logo dynamic-logo" src="" alt="Forge Ally"></div>
       <div class="panel-stats">
-        <div class="pstat">
-          <div class="pstat-val">40+</div>
-          <div class="pstat-lbl">Interviews<br>Planned</div>
-        </div>
-        <div class="pstat">
-          <div class="pstat-val">10</div>
-          <div class="pstat-lbl">Posts<br>in 5 days</div>
-        </div>
-        <div class="pstat">
-          <div class="pstat-val">0→5</div>
-          <div class="pstat-lbl">Girls on<br>the Team</div>
-        </div>
-        <div class="pstat">
-          <div class="pstat-val">3</div>
-          <div class="pstat-lbl">Active<br>Neurodivergent members</div>
-        </div>
+        <div class="pstat"><div class="pstat-val">40+</div><div class="pstat-lbl">Interviews<br>Planned</div></div>
+        <div class="pstat"><div class="pstat-val">10</div><div class="pstat-lbl">Posts<br>in 5 days</div></div>
+        <div class="pstat"><div class="pstat-val">0→5</div><div class="pstat-lbl">Girls on<br>the Team</div></div>
+        <div class="pstat"><div class="pstat-val">3</div><div class="pstat-lbl">Active<br>Neurodivergent members</div></div>
       </div>
       <div class="panel-tag">Diverse &amp; Inclusive Engineering</div>
     </div>
   </div>
 </section>
 
-<!-- MARQUEE -->
-<div class="marquee-wrap">
-  <div class="marquee-track">
-    <div class="marquee-item">Forge Ally</div>
-    <div class="marquee-item">FTC #30439</div>
-    <div class="marquee-item">Cool Name Pending</div>
-    <div class="marquee-item">Women in STEM</div>
-    <div class="marquee-item">Neurodiversity</div>
-    <div class="marquee-item">Inclusive Engineering</div>
-    <div class="marquee-item">Launched March 7 2026</div>
-    <div class="marquee-item">Build Inclusion</div>
-    <div class="marquee-item">FIRST Robotics</div>
-    <div class="marquee-item">MarketFair Pop-Up</div>
-    <div class="marquee-item">Forge Ally</div>
-    <div class="marquee-item">FTC #30439</div>
-    <div class="marquee-item">Cool Name Pending</div>
-    <div class="marquee-item">Women in STEM</div>
-    <div class="marquee-item">Neurodiversity</div>
-    <div class="marquee-item">Inclusive Engineering</div>
-    <div class="marquee-item">Launched March 7 2026</div>
-    <div class="marquee-item">Build Inclusion</div>
-    <div class="marquee-item">FIRST Robotics</div>
-    <div class="marquee-item">MarketFair Pop-Up</div>
-  </div>
-</div>
+<div class="marquee-wrap"><div class="marquee-track">
+  <div class="marquee-item">Forge Ally</div><div class="marquee-item">FTC #30439</div><div class="marquee-item">Cool Name Pending</div><div class="marquee-item">Women in STEM</div><div class="marquee-item">Neurodiversity</div><div class="marquee-item">Inclusive Engineering</div><div class="marquee-item">Launched March 7 2026</div><div class="marquee-item">Build Inclusion</div><div class="marquee-item">FIRST Robotics</div><div class="marquee-item">MarketFair Pop-Up</div>
+  <div class="marquee-item">Forge Ally</div><div class="marquee-item">FTC #30439</div><div class="marquee-item">Cool Name Pending</div><div class="marquee-item">Women in STEM</div><div class="marquee-item">Neurodiversity</div><div class="marquee-item">Inclusive Engineering</div><div class="marquee-item">Launched March 7 2026</div><div class="marquee-item">Build Inclusion</div><div class="marquee-item">FIRST Robotics</div><div class="marquee-item">MarketFair Pop-Up</div>
+</div></div>
 
-<!-- LAUNCH STRIP -->
 <div class="launch-strip">
   <div class="strip-badge">Just Launched</div>
-  <div class="strip-text">
-    <strong>March 7, 2026</strong> — Forge Ally goes live.
-    First event: <strong>Women's History Month Pop-Up at MarketFair.</strong>
-  </div>
+  <div class="strip-text"><strong>March 7, 2026</strong> — Forge Ally goes live. First event: <strong>Women's History Month Pop-Up at MarketFair.</strong></div>
 </div>
 
-<!-- MISSION -->
 <section class="section" id="mission">
   <div class="stag reveal">Mission</div>
   <h2 class="reveal d1">Innovation happens when <span class="ac">everyone</span><br>is included.</h2>
@@ -686,25 +529,18 @@ window.addEventListener('DOMContentLoaded',()=>{
 
 <div class="grad-bar"></div>
 
-<!-- EVENTS -->
 <div class="full-section event-section" id="events">
   <div class="inner">
     <div class="stag reveal">Events</div>
     <h2 class="reveal d1">On the <span class="ac">Ground.</span></h2>
     <p class="section-sub reveal d2">We just launched. Here's where we've already shown up.</p>
     <div class="event-card reveal d3">
-      <div class="event-date">
-        <div class="ev-month">March</div>
-        <div class="ev-day">2026</div>
-        <div class="ev-year">MarketFair</div>
-      </div>
+      <div class="event-date"><div class="ev-month">March</div><div class="ev-day">2026</div><div class="ev-year">MarketFair</div></div>
       <div class="event-body">
         <div class="ev-type">Pop-Up Event</div>
         <div class="ev-title">Women's History Month Pop-Up</div>
         <div class="ev-loc">MarketFair Mall, Princeton, NJ</div>
-        <div class="ev-desc">
-          Our first public outreach event — bringing Forge Ally directly to the community. Students got hands-on with robotics for the first time, met the team, and learned about FIRST and FTC.
-        </div>
+        <div class="ev-desc">Our first public outreach event — bringing Forge Ally directly to the community. Students got hands-on with robotics for the first time, met the team, and learned about FIRST and FTC.</div>
         <div class="ev-pill">Women's History Month 2026</div>
       </div>
     </div>
@@ -713,71 +549,27 @@ window.addEventListener('DOMContentLoaded',()=>{
 
 <div class="grad-bar"></div>
 
-<!-- INITIATIVES -->
 <section class="section" id="initiatives">
   <div class="stag reveal">What We Do</div>
   <h2 class="reveal d1">Four pillars. <span class="ac">One mission.</span></h2>
   <p class="section-sub reveal d2">Every component of Forge Ally is designed to make inclusion visible and robotics accessible.</p>
   <div class="init-grid">
-    <div class="init-card reveal d1" data-n="01">
-      <div class="init-name">STEM Interview Series</div>
-      <div class="init-desc">5+ interviews per week with engineers, developers, AI researchers, accessibility specialists, and business leaders. Their stories become the proof that STEM belongs to everyone.</div>
-      <div class="init-tags">
-        <span class="init-tag">4/week</span>
-        <span class="init-tag">Short-form clips</span>
-        <span class="init-tag">Career journeys</span>
-      </div>
-    </div>
-    <div class="init-card reveal d2" data-n="02">
-      <div class="init-name">Resources for all</div>
-      <div class="init-desc">Daily resources for everyone to use ranging from beginner to expert.</div>
-      <div class="init-tags">
-        <span class="init-tag">Learning</span>
-        <span class="init-tag">Resources</span>
-        <span class="init-tag">Independent Learning</span>
-      </div>
-    </div>
-    <div class="init-card reveal d3" data-n="03">
-      <div class="init-name">Events</div>
-      <div class="init-desc">We reach the STEM community through hosting and supporting events, spreading the message of FIRST and Forge Ally </div>
-      <div class="init-tags">
-        <span class="init-tag">Outreach</span>
-        <span class="init-tag">STEM</span>
-      </div>
-    </div>
-    <div class="init-card reveal d4" data-n="04">
-      <div class="init-name">Free Workshops</div>
-      <div class="init-desc">Nothing teaches the community better than hands-on experience. Through free workshops for students, people who may not see themselves in STEM get a glimpse into STEM.</div>
-      <div class="init-tags">
-        <span class="init-tag">STEM</span>
-        <span class="init-tag">Hands-On</span>
-      </div>
-    </div>
+    <div class="init-card reveal d1" data-n="01"><div class="init-name">STEM Interview Series</div><div class="init-desc">5+ interviews per week with engineers, developers, AI researchers, accessibility specialists, and business leaders. Their stories become the proof that STEM belongs to everyone.</div><div class="init-tags"><span class="init-tag">4/week</span><span class="init-tag">Short-form clips</span><span class="init-tag">Career journeys</span></div></div>
+    <div class="init-card reveal d2" data-n="02"><div class="init-name">Resources for all</div><div class="init-desc">Daily resources for everyone to use ranging from beginner to expert.</div><div class="init-tags"><span class="init-tag">Learning</span><span class="init-tag">Resources</span><span class="init-tag">Independent Learning</span></div></div>
+    <div class="init-card reveal d3" data-n="03"><div class="init-name">Events</div><div class="init-desc">We reach the STEM community through hosting and supporting events, spreading the message of FIRST and Forge Ally </div><div class="init-tags"><span class="init-tag">Outreach</span><span class="init-tag">STEM</span></div></div>
+    <div class="init-card reveal d4" data-n="04"><div class="init-name">Free Workshops</div><div class="init-desc">Nothing teaches the community better than hands-on experience. Through free workshops for students, people who may not see themselves in STEM get a glimpse into STEM.</div><div class="init-tags"><span class="init-tag">STEM</span><span class="init-tag">Hands-On</span></div></div>
   </div>
 </section>
 
-<!-- GOALS -->
 <div class="full-section goals-bg">
   <div class="inner">
     <div class="stag reveal">3-Month Goals</div>
     <h2 class="reveal d1">Built to <span class="ac">scale.</span></h2>
     <div class="goals-grid">
-      <div class="gcell reveal d1">
-        <div class="gnum">40+</div>
-        <div class="glbl"><strong>Planned: Professionals Interviewed</strong>Across engineering, design, AI, education, and accessibility</div>
-      </div>
-      <div class="gcell reveal d2">
-        <div class="gnum">40+</div>
-        <div class="glbl"><strong>Social Posts Published</strong>Per month</div>
-      </div>
-      <div class="gcell reveal d3">
-        <div class="gnum">10</div>
-        <div class="glbl"><strong>Posts Per Week</strong>Interview clips, funny skits, progress posts, and more.</div>
-      </div>
-      <div class="gcell reveal d4">
-        <div class="gnum">2</div>
-        <div class="glbl"><strong>Platforms</strong>Instagram and LinkedIn — where students and professionals actually are</div>
-      </div>
+      <div class="gcell reveal d1"><div class="gnum">40+</div><div class="glbl"><strong>Planned: Professionals Interviewed</strong>Across engineering, design, AI, education, and accessibility</div></div>
+      <div class="gcell reveal d2"><div class="gnum">40+</div><div class="glbl"><strong>Social Posts Published</strong>Per month</div></div>
+      <div class="gcell reveal d3"><div class="gnum">10</div><div class="glbl"><strong>Posts Per Week</strong>Interview clips, funny skits, progress posts, and more.</div></div>
+      <div class="gcell reveal d4"><div class="gnum">2</div><div class="glbl"><strong>Platforms</strong>Instagram and LinkedIn — where students and professionals actually are</div></div>
     </div>
   </div>
 </div>
@@ -793,7 +585,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     data-instgrm-version="14"
     style="background:#0D0A1C;border:1px solid rgba(232,114,42,0.2);border-radius:6px;margin:0;max-width:100%;min-width:326px;padding:0;width:100%;"></blockquote>
 </div>
-  -->
+-->
 <section class="section" id="posts">
   <div class="stag reveal">Latest Posts</div>
   <h2 class="reveal d1">From the Feed: <span class="ac">Interviews.</span> and more.</h2>
@@ -801,45 +593,29 @@ window.addEventListener('DOMContentLoaded',()=>{
   <div class="posts-grid">
     <div class="post-wrap reveal d2">
       <div class="post-label">Launch Post</div>
-      <blockquote class="instagram-media"
-        data-instgrm-permalink="https://www.instagram.com/p/DVrMzrlEb3d/"
-        data-instgrm-version="14"
-        style="background:#0D0A1C;border:1px solid rgba(232,114,42,0.2);border-radius:6px;margin:0;max-width:100%;min-width:326px;padding:0;width:100%;"></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DVrMzrlEb3d/" data-instgrm-version="14" style="background:#0D0A1C;border:1px solid rgba(232,114,42,0.2);border-radius:6px;margin:0;max-width:100%;min-width:326px;padding:0;width:100%;"></blockquote>
     </div>
     <div class="post-wrap reveal d3">
       <div class="post-label">Interview — Madhavi</div>
-      <blockquote class="instagram-media"
-        data-instgrm-permalink="https://www.instagram.com/p/DVoWg6FjZld/"
-        data-instgrm-version="14"
-        style="background:#0D0A1C;border:1px solid rgba(232,114,42,0.2);border-radius:6px;margin:0;max-width:100%;min-width:326px;padding:0;width:100%;"></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DVoWg6FjZld/" data-instgrm-version="14" style="background:#0D0A1C;border:1px solid rgba(232,114,42,0.2);border-radius:6px;margin:0;max-width:100%;min-width:326px;padding:0;width:100%;"></blockquote>
     </div>
     <div class="post-wrap reveal d4">
       <div class="post-label">Interview — Dr. Mary Jane Cheah</div>
-      <blockquote class="instagram-media"
-        data-instgrm-permalink="https://www.instagram.com/p/DVrzJa-kQu-/"
-        data-instgrm-version="14"
-        style="background:#0D0A1C;border:1px solid rgba(232,114,42,0.2);border-radius:6px;margin:0;max-width:100%;min-width:326px;padding:0;width:100%;"></blockquote>
-    </div> 
-    <div class="post-wrap reveal d5">
-  <div class="post-label">Interview — Mrs. Mala Pathak Bhatt</div>
-  <blockquote class="instagram-media"
-    data-instgrm-permalink="https://www.instagram.com/p/DVzF1ktkQru/"
-    data-instgrm-version="14"
-    style="background:#0D0A1C;border:1px solid rgba(232,114,42,0.2);border-radius:6px;margin:0;max-width:100%;min-width:326px;padding:0;width:100%;"></blockquote>
-</div> <!-- new posts after ts -->
-    <div class="post-wrap reveal d6">
-  <div class="post-label">Interview — Mrs. Shubhrata Bhargava</div>
-  <blockquote class="instagram-media"
-    data-instgrm-permalink="https://www.instagram.com/p/DVzg0IUEQwV/"
-    data-instgrm-version="14"
-    style="background:#0D0A1C;border:1px solid rgba(232,114,42,0.2);border-radius:6px;margin:0;max-width:100%;min-width:326px;padding:0;width:100%;"></blockquote>
-</div>
-  </div> <!-- no posts past ts -->
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DVrzJa-kQu-/" data-instgrm-version="14" style="background:#0D0A1C;border:1px solid rgba(232,114,42,0.2);border-radius:6px;margin:0;max-width:100%;min-width:326px;padding:0;width:100%;"></blockquote>
+    </div>
+    <div class="post-wrap reveal d4">
+      <div class="post-label">Interview — Mrs. Mala Pathak Bhatt</div>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DVzF1ktkQru/" data-instgrm-version="14" style="background:#0D0A1C;border:1px solid rgba(232,114,42,0.2);border-radius:6px;margin:0;max-width:100%;min-width:326px;padding:0;width:100%;"></blockquote>
+    </div>
+    <div class="post-wrap reveal d4">
+      <div class="post-label">Interview — Mrs. Shubhrata Bhargava</div>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DVzg0IUEQwV/" data-instgrm-version="14" style="background:#0D0A1C;border:1px solid rgba(232,114,42,0.2);border-radius:6px;margin:0;max-width:100%;min-width:326px;padding:0;width:100%;"></blockquote>
+    </div>
+  </div>
 </section>
 <script async src="https://www.instagram.com/embed.js"></script>
 <div class="grad-bar"></div>
 
-<!-- SOCIAL — We Post Every Week -->
 <section class="section" id="social">
   <div class="stag">Follow Along</div>
   <h2>We post. <span class="ac">Every week.</span></h2>
@@ -869,7 +645,6 @@ window.addEventListener('DOMContentLoaded',()=>{
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
@@ -879,11 +654,12 @@ window.addEventListener('DOMContentLoaded',()=>{
     <div>
       <div class="fhead">Navigate</div>
       <ul class="flinks">
-        <li><a href="#mission">Mission</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#initiatives">Initiatives</a></li>
-        <li><a href="#posts">Posts</a></li>
-        <li><a href="#social">Social</a></li>
+        <li><a href="#mission" onclick="showMain();">Mission</a></li>
+        <li><a href="#events" onclick="showMain();">Events</a></li>
+        <li><a href="#initiatives" onclick="showMain();">Initiatives</a></li>
+        <li><a href="#posts" onclick="showMain();">Posts</a></li>
+        <li><a href="#social" onclick="showMain();">Social</a></li>
+        <li><a onclick="showHub();return false;">Knowledge Hub</a></li>
       </ul>
     </div>
     <div>
@@ -900,32 +676,889 @@ window.addEventListener('DOMContentLoaded',()=>{
   </div>
 </footer>
 
+</div><!-- end #main-site -->
+
+<!-- ═══════════════════ HUB PAGE ═══════════════════ -->
+<div id="hub-page">
+
+<div class="hub-hero">
+  <div class="hub-eyebrow">Cool Name Pending #30439 — Community Resource</div>
+  <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(3.2rem,6vw,5.8rem);font-weight:700;line-height:0.92;letter-spacing:-0.02em;margin-bottom:24px;">
+    <span style="color:var(--cream);display:block;">FTC Knowledge</span>
+    <span style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;">&amp; Training Hub.</span>
+  </h2>
+  <p class="hub-desc">
+    A community-driven platform where students share practical knowledge, real-world engineering experiences, and step-by-step learning resources.
+    <strong>50 lessons across 6 areas — video content dropping continuously.</strong>
+  </p>
+  <div class="hub-stats">
+    <div class="hstat"><div class="hstat-val">50</div><div class="hstat-lbl">Lessons Planned</div></div>
+    <div class="hstat"><div class="hstat-val">6</div><div class="hstat-lbl">Categories</div></div>
+    <div class="hstat"><div class="hstat-val">Video</div><div class="hstat-lbl">Format</div></div>
+    <div class="hstat"><div class="hstat-val">Free</div><div class="hstat-lbl">Always</div></div>
+  </div>
+</div>
+<div class="grad-bar"></div>
+
+<div style="position:relative;z-index:10;padding:24px 52px 0;background:rgba(8,6,18,0.7);backdrop-filter:blur(20px);">
+  <div class="tier-legend">
+    <div class="tier-chip t-beg">Beginner</div>
+    <div class="tier-chip t-adv">Advanced</div>
+    <div class="tier-chip t-exp">Expert</div>
+  </div>
+</div>
+<!-- CATEGORY NAV -->
+<div class="cat-nav">
+  <a class="cat-pill" href="#reach">Reach</a>
+  <a class="cat-pill" href="#connect">Connect</a>
+  <a class="cat-pill" href="#innovate">Innovate</a>
+  <a class="cat-pill" href="#funding">Funding & Sustainability</a>
+  <a class="cat-pill" href="#design">Design & Build</a>
+  <a class="cat-pill" href="#software">Control & Software</a>
+</div>
+
+<!-- ALL LESSONS -->
+<div class="hub-body">
+
+  <!-- ══════════════════════════════════════════
+       CATEGORY 1 — REACH
+       ══════════════════════════════════════════ -->
+  <div class="cat-block" id="reach">
+    <div class="cat-header reveal">
+      <div class="cat-num">01</div>
+      <div class="cat-title-wrap">
+        <div class="cat-tag">Category One</div>
+        <div class="cat-name">Reach</div>
+        <div class="cat-desc">How to expand your impact, inspire new students, and document meaningful outreach that resonates with judges and communities alike.</div>
+      </div>
+    </div>
+    <div class="lesson-grid">
+
+      <!-- LESSON 01
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "What 'Reach' Actually Means in FTC Judging"
+      -->
+      <div class="lesson-card reveal d1">
+        <div class="lesson-top">
+          <span class="lesson-num">01</span>
+          <span class="lesson-badge" style="background:rgba(46,180,100,0.15);border-color:rgba(46,180,100,0.35);color:#5fd68a;">Beginner</span>
+        </div>
+        <div class="lesson-title">What "Reach" Actually Means in FTC Judging</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 02
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "How to Run a Demo at a School or Library"
+      -->
+      <div class="lesson-card reveal d2">
+        <div class="lesson-top">
+          <span class="lesson-num">02</span>
+          <span class="lesson-badge" style="background:rgba(46,180,100,0.15);border-color:rgba(46,180,100,0.35);color:#5fd68a;">Beginner</span>
+        </div>
+        <div class="lesson-title">How to Run a Demo at a School or Library</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 03
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Turning a Small Event Into High-Impact Outreach"
+      -->
+      <div class="lesson-card reveal d3">
+        <div class="lesson-top">
+          <span class="lesson-num">03</span>
+          <span class="lesson-badge" style="background:rgba(46,180,100,0.15);border-color:rgba(46,180,100,0.35);color:#5fd68a;">Beginner</span>
+        </div>
+        <div class="lesson-title">Turning a Small Event Into High-Impact Outreach</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 04
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Measuring Reach: People, Depth, and Conversion"
+      -->
+      <div class="lesson-card reveal d4">
+        <div class="lesson-top">
+          <span class="lesson-num">04</span>
+          <span class="lesson-badge" style="background:rgba(232,114,42,0.12);border-color:rgba(232,114,42,0.35);color:#E8722A;">Advanced</span>
+        </div>
+        <div class="lesson-title">Measuring Reach: People, Depth, and Conversion</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 05
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Explaining Robots to Non-Technical Audiences"
+      -->
+      <div class="lesson-card reveal d5">
+        <div class="lesson-top">
+          <span class="lesson-num">05</span>
+          <span class="lesson-badge" style="background:rgba(232,114,42,0.12);border-color:rgba(232,114,42,0.35);color:#E8722A;">Advanced</span>
+        </div>
+        <div class="lesson-title">Explaining Robots to Non-Technical Audiences</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 06
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Creating Inclusive STEM Activities for All Ages"
+      -->
+      <div class="lesson-card reveal d6">
+        <div class="lesson-top">
+          <span class="lesson-num">06</span>
+          <span class="lesson-badge" style="background:rgba(232,114,42,0.12);border-color:rgba(232,114,42,0.35);color:#E8722A;">Advanced</span>
+        </div>
+        <div class="lesson-title">Creating Inclusive STEM Activities for All Ages</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 07
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Documenting Outreach for Your Engineering Notebook"
+      -->
+      <div class="lesson-card reveal d7">
+        <div class="lesson-top">
+          <span class="lesson-num">07</span>
+          <span class="lesson-badge" style="background:rgba(123,63,160,0.15);border-color:rgba(123,63,160,0.4);color:#B07FD0;">Expert</span>
+        </div>
+        <div class="lesson-title">Documenting Outreach for Your Engineering Notebook</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 08
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Building a Lasting Community Presence Beyond One Season"
+      -->
+      <div class="lesson-card reveal d8">
+        <div class="lesson-top">
+          <span class="lesson-num">08</span>
+          <span class="lesson-badge" style="background:rgba(123,63,160,0.15);border-color:rgba(123,63,160,0.4);color:#B07FD0;">Expert</span>
+        </div>
+        <div class="lesson-title">Building a Lasting Community Presence Beyond One Season</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="grad-bar" style="margin-bottom:80px;"></div>
+
+  <!-- ══════════════════════════════════════════
+       CATEGORY 2 — CONNECT
+       ══════════════════════════════════════════ -->
+  <div class="cat-block" id="connect">
+    <div class="cat-header reveal">
+      <div class="cat-num">02</div>
+      <div class="cat-title-wrap">
+        <div class="cat-tag">Category Two</div>
+        <div class="cat-name">Connect</div>
+        <div class="cat-desc">Building real relationships — with mentors, engineers, other teams, and the broader STEM community.</div>
+      </div>
+    </div>
+    <div class="lesson-grid">
+
+      <!-- LESSON 09
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "What 'Connect' Means Beyond Just Talking to People"
+      -->
+      <div class="lesson-card reveal d1">
+        <div class="lesson-top">
+          <span class="lesson-num">09</span>
+          <span class="lesson-badge" style="background:rgba(46,180,100,0.15);border-color:rgba(46,180,100,0.35);color:#5fd68a;">Beginner</span>
+        </div>
+        <div class="lesson-title">What "Connect" Means Beyond Just Talking to People</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 10
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "How Professional Engineering Connects to FTC Skills"
+      -->
+      <div class="lesson-card reveal d2">
+        <div class="lesson-top">
+          <span class="lesson-num">10</span>
+          <span class="lesson-badge" style="background:rgba(46,180,100,0.15);border-color:rgba(46,180,100,0.35);color:#5fd68a;">Beginner</span>
+        </div>
+        <div class="lesson-title">How Professional Engineering Connects to FTC Skills</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 11
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "How to Approach Mentors Professionally"
+      -->
+      <div class="lesson-card reveal d3">
+        <div class="lesson-top">
+          <span class="lesson-num">11</span>
+          <span class="lesson-badge" style="background:rgba(46,180,100,0.15);border-color:rgba(46,180,100,0.35);color:#5fd68a;">Beginner</span>
+        </div>
+        <div class="lesson-title">How to Approach Mentors Professionally</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 12
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "How to Prepare for a Mentor Meeting"
+      -->
+      <div class="lesson-card reveal d4">
+        <div class="lesson-top">
+          <span class="lesson-num">12</span>
+          <span class="lesson-badge" style="background:rgba(232,114,42,0.12);border-color:rgba(232,114,42,0.35);color:#E8722A;">Advanced</span>
+        </div>
+        <div class="lesson-title">How to Prepare for a Mentor Meeting</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 13
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Turning Mentor Advice Into Concrete Action"
+      -->
+      <div class="lesson-card reveal d5">
+        <div class="lesson-top">
+          <span class="lesson-num">13</span>
+          <span class="lesson-badge" style="background:rgba(232,114,42,0.12);border-color:rgba(232,114,42,0.35);color:#E8722A;">Advanced</span>
+        </div>
+        <div class="lesson-title">Turning Mentor Advice Into Concrete Action</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 14
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "How to Collaborate With Other FTC and FLL Teams"
+      -->
+      <div class="lesson-card reveal d6">
+        <div class="lesson-top">
+          <span class="lesson-num">14</span>
+          <span class="lesson-badge" style="background:rgba(232,114,42,0.12);border-color:rgba(232,114,42,0.35);color:#E8722A;">Advanced</span>
+        </div>
+        <div class="lesson-title">How to Collaborate With Other FTC and FLL Teams</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 15
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "How to Mentor Younger Teams Effectively"
+      -->
+      <div class="lesson-card reveal d7">
+        <div class="lesson-top">
+          <span class="lesson-num">15</span>
+          <span class="lesson-badge" style="background:rgba(123,63,160,0.15);border-color:rgba(123,63,160,0.4);color:#B07FD0;">Expert</span>
+        </div>
+        <div class="lesson-title">How to Mentor Younger Teams Effectively</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 16
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Building a Network That Lasts Beyond the Season"
+      -->
+      <div class="lesson-card reveal d8">
+        <div class="lesson-top">
+          <span class="lesson-num">16</span>
+          <span class="lesson-badge" style="background:rgba(123,63,160,0.15);border-color:rgba(123,63,160,0.4);color:#B07FD0;">Expert</span>
+        </div>
+        <div class="lesson-title">Building a Network That Lasts Beyond the Season</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="grad-bar" style="margin-bottom:80px;"></div>
+
+  <!-- ══════════════════════════════════════════
+       CATEGORY 3 — INNOVATE
+       ══════════════════════════════════════════ -->
+  <div class="cat-block" id="innovate">
+    <div class="cat-header reveal">
+      <div class="cat-num">03</div>
+      <div class="cat-title-wrap">
+        <div class="cat-tag">Category Three</div>
+        <div class="cat-name">Innovate</div>
+        <div class="cat-desc">Tools and frameworks that teach creative problem-solving, original thinking, and the engineering design process.</div>
+      </div>
+    </div>
+    <div class="lesson-grid">
+
+      <!-- LESSON 17
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "What Innovation Actually Looks Like in FTC"
+      -->
+      <div class="lesson-card reveal d1">
+        <div class="lesson-top">
+          <span class="lesson-num">17</span>
+          <span class="lesson-badge" style="background:rgba(46,180,100,0.15);border-color:rgba(46,180,100,0.35);color:#5fd68a;">Beginner</span>
+        </div>
+        <div class="lesson-title">What Innovation Actually Looks Like in FTC</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 18
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Incremental vs. Breakthrough Innovation"
+      -->
+      <div class="lesson-card reveal d2">
+        <div class="lesson-top">
+          <span class="lesson-num">18</span>
+          <span class="lesson-badge" style="background:rgba(46,180,100,0.15);border-color:rgba(46,180,100,0.35);color:#5fd68a;">Beginner</span>
+        </div>
+        <div class="lesson-title">Incremental vs. Breakthrough Innovation</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 19
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Identifying Game Problems Worth Solving"
+      -->
+      <div class="lesson-card reveal d3">
+        <div class="lesson-top">
+          <span class="lesson-num">19</span>
+          <span class="lesson-badge" style="background:rgba(46,180,100,0.15);border-color:rgba(46,180,100,0.35);color:#5fd68a;">Beginner</span>
+        </div>
+        <div class="lesson-title">Identifying Game Problems Worth Solving</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 20
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Brainstorming Techniques Used by Real Engineers"
+      -->
+      <div class="lesson-card reveal d4">
+        <div class="lesson-top">
+          <span class="lesson-num">20</span>
+          <span class="lesson-badge" style="background:rgba(232,114,42,0.12);border-color:rgba(232,114,42,0.35);color:#E8722A;">Advanced</span>
+        </div>
+        <div class="lesson-title">Brainstorming Techniques Used by Real Engineers</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 21
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "How to Evaluate Ideas Objectively"
+      -->
+      <div class="lesson-card reveal d5">
+        <div class="lesson-top">
+          <span class="lesson-num">21</span>
+          <span class="lesson-badge" style="background:rgba(232,114,42,0.12);border-color:rgba(232,114,42,0.35);color:#E8722A;">Advanced</span>
+        </div>
+        <div class="lesson-title">How to Evaluate Ideas Objectively</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 22
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Trade-offs and Constraints in Engineering Design"
+      -->
+      <div class="lesson-card reveal d6">
+        <div class="lesson-top">
+          <span class="lesson-num">22</span>
+          <span class="lesson-badge" style="background:rgba(232,114,42,0.12);border-color:rgba(232,114,42,0.35);color:#E8722A;">Advanced</span>
+        </div>
+        <div class="lesson-title">Trade-offs and Constraints in Engineering Design</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 23
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Rapid Prototyping Fundamentals"
+      -->
+      <div class="lesson-card reveal d7">
+        <div class="lesson-top">
+          <span class="lesson-num">23</span>
+          <span class="lesson-badge" style="background:rgba(232,114,42,0.12);border-color:rgba(232,114,42,0.35);color:#E8722A;">Advanced</span>
+        </div>
+        <div class="lesson-title">Rapid Prototyping Fundamentals</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 24
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Decision Matrices: Choosing Between Design Options"
+      -->
+      <div class="lesson-card reveal d8">
+        <div class="lesson-top">
+          <span class="lesson-num">24</span>
+          <span class="lesson-badge" style="background:rgba(123,63,160,0.15);border-color:rgba(123,63,160,0.4);color:#B07FD0;">Expert</span>
+        </div>
+        <div class="lesson-title">Decision Matrices: Choosing Between Design Options</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 25
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Documenting Innovation in Your Engineering Notebook"
+      -->
+      <div class="lesson-card reveal d1">
+        <div class="lesson-top">
+          <span class="lesson-num">25</span>
+          <span class="lesson-badge" style="background:rgba(123,63,160,0.15);border-color:rgba(123,63,160,0.4);color:#B07FD0;">Expert</span>
+        </div>
+        <div class="lesson-title">Documenting Innovation in Your Engineering Notebook</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="grad-bar" style="margin-bottom:80px;"></div>
+
+  <!-- ══════════════════════════════════════════
+       CATEGORY 4 — FUNDING & SUSTAINABILITY
+       ══════════════════════════════════════════ -->
+  <div class="cat-block" id="funding">
+    <div class="cat-header reveal">
+      <div class="cat-num">04</div>
+      <div class="cat-title-wrap">
+        <div class="cat-tag">Category Four</div>
+        <div class="cat-name">Funding & Sustainability</div>
+        <div class="cat-desc">Resources to help teams financially sustain themselves, plan long-term, and treat funding as a genuine technical skill.</div>
+      </div>
+    </div>
+    <div class="lesson-grid">
+
+      <!-- LESSON 26
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "What Sustainability Means in FTC"
+      -->
+      <div class="lesson-card reveal d1">
+        <div class="lesson-top">
+          <span class="lesson-num">26</span>
+          <span class="lesson-badge" style="background:rgba(46,180,100,0.15);border-color:rgba(46,180,100,0.35);color:#5fd68a;">Beginner</span>
+        </div>
+        <div class="lesson-title">What Sustainability Means in FTC</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 27
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Why Funding Is a Technical Skill, Not Just Admin Work"
+      -->
+      <div class="lesson-card reveal d2">
+        <div class="lesson-top">
+          <span class="lesson-num">27</span>
+          <span class="lesson-badge" style="background:rgba(46,180,100,0.15);border-color:rgba(46,180,100,0.35);color:#5fd68a;">Beginner</span>
+        </div>
+        <div class="lesson-title">Why Funding Is a Technical Skill, Not Just Admin Work</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 28
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "How to Approach Sponsors Cold"
+      -->
+      <div class="lesson-card reveal d3">
+        <div class="lesson-top">
+          <span class="lesson-num">28</span>
+          <span class="lesson-badge" style="background:rgba(46,180,100,0.15);border-color:rgba(46,180,100,0.35);color:#5fd68a;">Beginner</span>
+        </div>
+        <div class="lesson-title">How to Approach Sponsors Cold</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 29
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "How to Write a Sponsorship Pitch"
+      -->
+      <div class="lesson-card reveal d4">
+        <div class="lesson-top">
+          <span class="lesson-num">29</span>
+          <span class="lesson-badge" style="background:rgba(232,114,42,0.12);border-color:rgba(232,114,42,0.35);color:#E8722A;">Advanced</span>
+        </div>
+        <div class="lesson-title">How to Write a Sponsorship Pitch</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 30
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Local Business vs. Corporate Sponsorship Strategies"
+      -->
+      <div class="lesson-card reveal d5">
+        <div class="lesson-top">
+          <span class="lesson-num">30</span>
+          <span class="lesson-badge" style="background:rgba(232,114,42,0.12);border-color:rgba(232,114,42,0.35);color:#E8722A;">Advanced</span>
+        </div>
+        <div class="lesson-title">Local Business vs. Corporate Sponsorship Strategies</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 31
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Finding and Applying for STEM Grants"
+      -->
+      <div class="lesson-card reveal d6">
+        <div class="lesson-top">
+          <span class="lesson-num">31</span>
+          <span class="lesson-badge" style="background:rgba(232,114,42,0.12);border-color:rgba(232,114,42,0.35);color:#E8722A;">Advanced</span>
+        </div>
+        <div class="lesson-title">Finding and Applying for STEM Grants</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 32
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Building a Season Budget From Scratch"
+      -->
+      <div class="lesson-card reveal d7">
+        <div class="lesson-top">
+          <span class="lesson-num">32</span>
+          <span class="lesson-badge" style="background:rgba(123,63,160,0.15);border-color:rgba(123,63,160,0.4);color:#B07FD0;">Expert</span>
+        </div>
+        <div class="lesson-title">Building a Season Budget From Scratch</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 33
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Multi-Year Planning for Team Sustainability"
+      -->
+      <div class="lesson-card reveal d8">
+        <div class="lesson-top">
+          <span class="lesson-num">33</span>
+          <span class="lesson-badge" style="background:rgba(123,63,160,0.15);border-color:rgba(123,63,160,0.4);color:#B07FD0;">Expert</span>
+        </div>
+        <div class="lesson-title">Multi-Year Planning for Team Sustainability</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="grad-bar" style="margin-bottom:80px;"></div>
+
+  <!-- ══════════════════════════════════════════
+       CATEGORY 5 — DESIGN & BUILD
+       ══════════════════════════════════════════ -->
+  <div class="cat-block" id="design">
+    <div class="cat-header reveal">
+      <div class="cat-num">05</div>
+      <div class="cat-title-wrap">
+        <div class="cat-tag">Category Five</div>
+        <div class="cat-name">Design & Build</div>
+        <div class="cat-desc">Step-by-step guidance on mechanical design, subsystems, iteration strategy, and building robots that actually hold up.</div>
+      </div>
+    </div>
+    <div class="lesson-grid">
+
+      <!-- LESSON 34
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "How to Break Down the FTC Game Mechanically"
+      -->
+      <div class="lesson-card reveal d1">
+        <div class="lesson-top">
+          <span class="lesson-num">34</span>
+          <span class="lesson-badge" style="background:rgba(46,180,100,0.15);border-color:rgba(46,180,100,0.35);color:#5fd68a;">Beginner</span>
+        </div>
+        <div class="lesson-title">How to Break Down the FTC Game Mechanically</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 35
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Design Constraints and Trade-offs Explained"
+      -->
+      <div class="lesson-card reveal d2">
+        <div class="lesson-top">
+          <span class="lesson-num">35</span>
+          <span class="lesson-badge" style="background:rgba(46,180,100,0.15);border-color:rgba(46,180,100,0.35);color:#5fd68a;">Beginner</span>
+        </div>
+        <div class="lesson-title">Design Constraints and Trade-offs Explained</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 36
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Drivetrain Types: Pros, Cons, and When to Use Each"
+      -->
+      <div class="lesson-card reveal d3">
+        <div class="lesson-top">
+          <span class="lesson-num">36</span>
+          <span class="lesson-badge" style="background:rgba(46,180,100,0.15);border-color:rgba(46,180,100,0.35);color:#5fd68a;">Beginner</span>
+        </div>
+        <div class="lesson-title">Drivetrain Types: Pros, Cons, and When to Use Each</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 37
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Intakes, Lifts, and Manipulators Overview"
+      -->
+      <div class="lesson-card reveal d4">
+        <div class="lesson-top">
+          <span class="lesson-num">37</span>
+          <span class="lesson-badge" style="background:rgba(232,114,42,0.12);border-color:rgba(232,114,42,0.35);color:#E8722A;">Advanced</span>
+        </div>
+        <div class="lesson-title">Intakes, Lifts, and Manipulators Overview</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 38
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Modular vs. Integrated Robot Designs"
+      -->
+      <div class="lesson-card reveal d5">
+        <div class="lesson-top">
+          <span class="lesson-num">38</span>
+          <span class="lesson-badge" style="background:rgba(232,114,42,0.12);border-color:rgba(232,114,42,0.35);color:#E8722A;">Advanced</span>
+        </div>
+        <div class="lesson-title">Modular vs. Integrated Robot Designs</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 39
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "How to Test Mechanisms Systematically"
+      -->
+      <div class="lesson-card reveal d6">
+        <div class="lesson-top">
+          <span class="lesson-num">39</span>
+          <span class="lesson-badge" style="background:rgba(232,114,42,0.12);border-color:rgba(232,114,42,0.35);color:#E8722A;">Advanced</span>
+        </div>
+        <div class="lesson-title">How to Test Mechanisms Systematically</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 40
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Why Early Failures Are Valuable"
+      -->
+      <div class="lesson-card reveal d7">
+        <div class="lesson-top">
+          <span class="lesson-num">40</span>
+          <span class="lesson-badge" style="background:rgba(232,114,42,0.12);border-color:rgba(232,114,42,0.35);color:#E8722A;">Advanced</span>
+        </div>
+        <div class="lesson-title">Why Early Failures Are Valuable</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 41
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Version Tracking and Design Logs"
+      -->
+      <div class="lesson-card reveal d8">
+        <div class="lesson-top">
+          <span class="lesson-num">41</span>
+          <span class="lesson-badge" style="background:rgba(123,63,160,0.15);border-color:rgba(123,63,160,0.4);color:#B07FD0;">Expert</span>
+        </div>
+        <div class="lesson-title">Version Tracking and Design Logs</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 42
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Building for Repair and Field Maintenance"
+      -->
+      <div class="lesson-card reveal d1">
+        <div class="lesson-top">
+          <span class="lesson-num">42</span>
+          <span class="lesson-badge" style="background:rgba(123,63,160,0.15);border-color:rgba(123,63,160,0.4);color:#B07FD0;">Expert</span>
+        </div>
+        <div class="lesson-title">Building for Repair and Field Maintenance</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="grad-bar" style="margin-bottom:80px;"></div>
+
+  <!-- ══════════════════════════════════════════
+       CATEGORY 6 — CONTROL & SOFTWARE
+       ══════════════════════════════════════════ -->
+  <div class="cat-block" id="software">
+    <div class="cat-header reveal">
+      <div class="cat-num">06</div>
+      <div class="cat-title-wrap">
+        <div class="cat-tag">Category Six</div>
+        <div class="cat-name">Control & Software</div>
+        <div class="cat-desc">Beginner-friendly through advanced guidance on FTC programming, control systems, autonomous strategy, and debugging.</div>
+      </div>
+    </div>
+    <div class="lesson-grid">
+
+      <!-- LESSON 43
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Control Systems Explained Simply"
+      -->
+      <div class="lesson-card reveal d1">
+        <div class="lesson-top">
+          <span class="lesson-num">43</span>
+          <span class="lesson-badge" style="background:rgba(46,180,100,0.15);border-color:rgba(46,180,100,0.35);color:#5fd68a;">Beginner</span>
+        </div>
+        <div class="lesson-title">Control Systems Explained Simply</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 44
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "TeleOp vs. Autonomous: Concepts and Strategy"
+      -->
+      <div class="lesson-card reveal d2">
+        <div class="lesson-top">
+          <span class="lesson-num">44</span>
+          <span class="lesson-badge" style="background:rgba(46,180,100,0.15);border-color:rgba(46,180,100,0.35);color:#5fd68a;">Beginner</span>
+        </div>
+        <div class="lesson-title">TeleOp vs. Autonomous: Concepts and Strategy</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 45
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Code Structure Best Practices for FTC"
+      -->
+      <div class="lesson-card reveal d3">
+        <div class="lesson-top">
+          <span class="lesson-num">45</span>
+          <span class="lesson-badge" style="background:rgba(46,180,100,0.15);border-color:rgba(46,180,100,0.35);color:#5fd68a;">Beginner</span>
+        </div>
+        <div class="lesson-title">Code Structure Best Practices for FTC</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 46
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "State Machines: What They Are and Why You Need Them"
+      -->
+      <div class="lesson-card reveal d4">
+        <div class="lesson-top">
+          <span class="lesson-num">46</span>
+          <span class="lesson-badge" style="background:rgba(232,114,42,0.12);border-color:rgba(232,114,42,0.35);color:#E8722A;">Advanced</span>
+        </div>
+        <div class="lesson-title">State Machines: What They Are and Why You Need Them</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 47
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Sensor Integration Basics"
+      -->
+      <div class="lesson-card reveal d5">
+        <div class="lesson-top">
+          <span class="lesson-num">47</span>
+          <span class="lesson-badge" style="background:rgba(232,114,42,0.12);border-color:rgba(232,114,42,0.35);color:#E8722A;">Advanced</span>
+        </div>
+        <div class="lesson-title">Sensor Integration Basics</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 48
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Path Planning for Autonomous Routines"
+      -->
+      <div class="lesson-card reveal d6">
+        <div class="lesson-top">
+          <span class="lesson-num">48</span>
+          <span class="lesson-badge" style="background:rgba(232,114,42,0.12);border-color:rgba(232,114,42,0.35);color:#E8722A;">Advanced</span>
+        </div>
+        <div class="lesson-title">Path Planning for Autonomous Routines</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 49
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Tuning and Debugging Autonomous"
+      -->
+      <div class="lesson-card reveal d7">
+        <div class="lesson-top">
+          <span class="lesson-num">49</span>
+          <span class="lesson-badge" style="background:rgba(123,63,160,0.15);border-color:rgba(123,63,160,0.4);color:#B07FD0;">Expert</span>
+        </div>
+        <div class="lesson-title">Tuning and Debugging Autonomous</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+      <!-- LESSON 50
+           VIDEO: Replace href="#" with your YouTube/Instagram video link
+           TITLE: "Common Bugs in FTC Code and How to Fix Them"
+      -->
+      <div class="lesson-card reveal d8">
+        <div class="lesson-top">
+          <span class="lesson-num">50</span>
+          <span class="lesson-badge" style="background:rgba(123,63,160,0.15);border-color:rgba(123,63,160,0.4);color:#B07FD0;">Expert</span>
+        </div>
+        <div class="lesson-title">Common Bugs in FTC Code and How to Fix Them</div>
+        <div class="lesson-type">Video</div><div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:0.49rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(154,136,112,0.45);">Coming Soon</div>
+        <div class="lesson-soon"></div>
+      </div>
+
+    </div>
+  </div>
+
+</div><!-- end hub-body -->
+
+<div style="position:relative;z-index:1;background:rgba(13,10,28,0.9);backdrop-filter:blur(20px);border-top:1px solid rgba(232,114,42,0.1);padding:36px 52px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+  <a onclick="showMain();return false;" style="font-family:'Share Tech Mono',monospace;font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--or);text-decoration:none;cursor:pointer;">← Back to Forge Ally</a>
+  <div class="fcopy">Cool Name Pending <span>#30439</span> — FTC Knowledge Hub</div>
+</div>
+</div><!-- end #hub-page -->
+
 <script>
-const LOGO_SRC = (() => { try { return LOGO; } catch(e){ return ''; } })();
+const bar = document.getElementById('scroll-progress');
+window.addEventListener('scroll', () => {
+  bar.style.width = (window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100) + '%';
+}, {passive:true});
+
 window.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('img.dynamic-logo').forEach(el => { if(LOGO_SRC) el.src = LOGO_SRC; });
-
-  const bar = document.getElementById('scroll-progress');
-  window.addEventListener('scroll', () => {
-    const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
-    bar.style.width = pct + '%';
-  }, { passive: true });
-
   const heroContent = document.querySelector('.hero-content');
   const heroPanel = document.querySelector('.hero-panel');
   window.addEventListener('scroll', () => {
     const y = window.scrollY;
-    if (heroContent) heroContent.style.transform = `translateY(${y * 0.18}px)`;
-    if (heroPanel)   heroPanel.style.transform   = `translateY(${y * 0.1}px)`;
-  }, { passive: true });
+    if (heroContent) heroContent.style.transform = `translateY(${y*0.18}px)`;
+    if (heroPanel)   heroPanel.style.transform   = `translateY(${y*0.1}px)`;
+  }, {passive:true});
 
-  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
   const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-  revealEls.forEach(el => obs.observe(el));
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('#main-site .reveal, #main-site .reveal-left, #main-site .reveal-right, #main-site .reveal-scale').forEach(el => obs.observe(el));
 
   function animateCount(el, target, suffix) {
     let start = 0;
@@ -950,7 +1583,7 @@ window.addEventListener('DOMContentLoaded', () => {
         counterObs.unobserve(el);
       }
     });
-  }, { threshold: 0.5 });
+  }, {threshold:0.5});
   document.querySelectorAll('.pstat-val, .gnum').forEach(el => counterObs.observe(el));
 
   document.addEventListener('mousemove', (e) => {
@@ -958,8 +1591,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const cy = e.clientY / window.innerHeight - 0.5;
     const o1 = document.querySelector('.orb-1');
     const o2 = document.querySelector('.orb-2');
-    if (o1) o1.style.transform = `translate(${cx * 40}px, ${cy * 40}px)`;
-    if (o2) o2.style.transform = `translate(${cx * -30}px, ${cy * -30}px)`;
+    if (o1) o1.style.transform = `translate(${cx*40}px, ${cy*40}px)`;
+    if (o2) o2.style.transform = `translate(${cx*-30}px, ${cy*-30}px)`;
   });
 });
 </script>
