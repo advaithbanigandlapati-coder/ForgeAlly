@@ -433,7 +433,8 @@ function showHub(){
   document.getElementById('main-site').classList.add('hidden');
   document.getElementById('hub-page').classList.add('active');
   window.scrollTo(0,0);
-  // re-trigger hub reveals
+  document.getElementById('nav-main-links').style.display='none';
+  document.getElementById('nav-hub-links').style.display='flex';
   setTimeout(()=>{
     document.querySelectorAll('#hub-page .reveal').forEach(el=>el.classList.remove('visible'));
     const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
@@ -444,6 +445,8 @@ function showMain(){
   document.getElementById('hub-page').classList.remove('active');
   document.getElementById('main-site').classList.remove('hidden');
   window.scrollTo(0,0);
+  document.getElementById('nav-main-links').style.display='flex';
+  document.getElementById('nav-hub-links').style.display='none';
 }
 </script>
 
@@ -457,7 +460,8 @@ function showMain(){
     <img class="nav-logo dynamic-logo" src="" alt="Forge Ally Logo">
     <div class="nav-wordmark">Forge Ally<small>Cool Name Pending #30439</small></div>
   </a>
-  <div class="nav-right">
+<div class="nav-right">
+  <div id="nav-main-links" style="display:flex;align-items:center;gap:32px;">
     <a href="#mission" onclick="showMain();">Mission</a>
     <a href="#events" onclick="showMain();">Events</a>
     <a href="#initiatives" onclick="showMain();">Initiatives</a>
@@ -465,6 +469,16 @@ function showMain(){
     <a onclick="showHub();return false;">Knowledge Hub</a>
     <a href="https://www.instagram.com/coolnamepending.ftc" target="_blank" rel="noopener" class="nav-cta">Instagram</a>
   </div>
+  <div id="nav-hub-links" style="display:none;align-items:center;gap:32px;">
+    <a href="#reach">Reach</a>
+    <a href="#connect">Connect</a>
+    <a href="#innovate">Innovate</a>
+    <a href="#funding">Funding</a>
+    <a href="#design">Design & Build</a>
+    <a href="#software">Software</a>
+    <a onclick="showMain();return false;" class="nav-cta">← Back</a>
+  </div>
+</div>
 </nav>
 
 <!-- ═══════════════════ MAIN SITE ═══════════════════ -->
@@ -720,14 +734,7 @@ function showMain(){
   </div>
 </div>
 <div class="grad-bar"></div>
-
-<div style="position:relative;z-index:10;padding:24px 52px 0;background:rgba(8,6,18,0.7);backdrop-filter:blur(20px);">
-  <div class="tier-legend">
-    <div class="tier-chip t-beg">Beginner</div>
-    <div class="tier-chip t-adv">Advanced</div>
-    <div class="tier-chip t-exp">Expert</div>
-  </div>
-</div>
+  
 <!-- CATEGORY NAV -->
 <div class="cat-nav">
   <a class="cat-pill" href="#reach">Reach</a>
